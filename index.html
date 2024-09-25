@@ -30,6 +30,7 @@
             margin-bottom: 30px;
             position: relative;
         }
+        /* Плавное увеличение картинки при наведении */
         .photo {
             width: 120px;
             height: 120px;
@@ -39,13 +40,16 @@
             border-radius: 50%;
             border: 2px solid #61afef;
             margin-right: 20px;
-            animation: rotate 10s infinite linear;
+            transition: transform 0.5s ease;
+        }
+        .photo:hover {
+            transform: scale(1.1); /* Увеличение картинки при наведении */
         }
         header h1 {
             font-size: 32px;
             margin: 0;
             color: #61afef;
-            animation: fadeInDown 1s;
+            animation: zoomIn 0.6s ease; /* Эффект увеличения при загрузке */
         }
         header p {
             margin: 5px 0 0;
@@ -86,7 +90,8 @@
         }
         .section {
             margin-bottom: 30px;
-            animation: fadeIn 1s;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards;
         }
         .section h2 {
             font-size: 24px;
@@ -115,9 +120,19 @@
             padding-left: 0;
         }
         .section ul li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.2s;
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
         .section ul li::before {
             content: "•";
@@ -529,6 +544,29 @@
             </div>
         </div>
 
+        <div class="section portfolio">
+            <h2><i class="fas fa-briefcase"></i> My Personal Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Presentation Editor (In Development)</h4>
+                    <p>A web application for creating and editing presentations, built with React and Redux Toolkit for state management. Focused on providing a flexible user interface.</p>
+                    <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Website</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> E-commerce on Golang (In Development)</h4>
+                    <p>A platform for e-commerce with a backend built on Golang, utilizing tools like GORM for database management and Docker for environment setup.</p>
+                    <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Business Card Website for Lawyers</h4>
+                    <p>A minimalist business card website with a responsive design aimed at presenting legal services. Built with modern technologies for optimized content loading and display.</p>
+                    <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Website</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+
+
+
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
             <p>My GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
@@ -743,6 +781,28 @@
             </div>
         </div>
 
+        <div class="section portfolio">
+            <h2><i class="fas fa-briefcase"></i> Мои Личные Проекты</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Редактор презентаций (в разработке)</h4>
+                    <p>Веб-приложение для создания и редактирования презентаций, построенное на React и Redux Toolkit для удобного управления состоянием. Основное внимание уделено гибкости пользовательского интерфейса.</p>
+                    <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Интернет-магазин на Golang (в разработке)</h4>
+                    <p>Платформа для электронной коммерции с серверной частью на Golang. Используются современные инструменты вроде GORM для работы с базой данных и Docker для управления окружением.</p>
+                    <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Сайт-визитка для юристов</h4>
+                    <p>Минималистичный сайт-визитка с адаптивным дизайном, ориентированным на представление юридических услуг. Используются современные технологии для оптимизации загрузки и отображения контента.</p>
+                    <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+
+
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Дополнительная Информация</h2>
             <p>Мой GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
@@ -912,6 +972,30 @@
                 <!-- Добавьте больше проектов по аналогии -->
             </div>
         </div>
+
+
+
+        <div class="section portfolio">
+            <h2><i class="fas fa-briefcase"></i> Жеке Жобаларым</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Презентация редакторы (әзірлену үстінде)</h4>
+                    <p>React және Redux Toolkit негізінде презентацияларды жасау және өңдеу үшін веб-қосымша. Пайдаланушы интерфейсін икемді басқаруға ерекше назар аударылған.</p>
+                    <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Golang-та интернет дүкен (әзірлену үстінде)</h4>
+                    <p>Golang-та серверлік бөлігі бар электрондық коммерция платформасы. GORM және Docker сияқты заманауи құралдар қолданылған.</p>
+                    <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
+                </div>
+                <div class="portfolio-item">
+                    <h4><i class="fas fa-project-diagram"></i> Юристерге арналған сайт-визитка</h4>
+                    <p>Минималистік визитка сайты, заңгерлік қызметтерді көрсетуге бағытталған. Мазмұнды жүктеу және көрсету үшін заманауи технологиялар пайдаланылған.</p>
+                    <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Дополнительная Информация</h2>
