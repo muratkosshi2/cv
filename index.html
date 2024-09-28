@@ -301,16 +301,36 @@
     </style>
     <script>
         function showLanguage(lang) {
+            // Скрываем все языковые версии
             var languages = document.getElementsByClassName('language');
             for (var i = 0; i < languages.length; i++) {
                 languages[i].classList.remove('active');
             }
+
+            // Отображаем выбранный язык
             document.getElementById(lang).classList.add('active');
+
+            // Обновляем URL с параметром языка
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.pushState({}, '', url);
         }
-        // Показываем русский язык по умолчанию
+
+        // Определяем язык из URL при загрузке страницы
         window.onload = function() {
-            showLanguage('ru');
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'ru'; // Если нет параметра, то по умолчанию русский
+            showLanguage(lang);
         };
+
+        // Пример вызова функции при выборе языка через кнопки
+        document.querySelectorAll('.language-selector button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const selectedLang = this.getAttribute('onclick').replace('showLanguage(', '').replace(')', '').replace("'", "").trim();
+                showLanguage(selectedLang);
+            });
+        });
+
     </script>
 </head>
 <body>
@@ -1005,6 +1025,6 @@
 
     </div>
     <script src="https://kit.fontawesome.com/859f408a69.js" crossorigin="anonymous"></script>
-    
+
 </body>
 </html>
