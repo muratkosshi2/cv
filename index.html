@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Резюме - Косши Мурат</title>
     <!-- Подключение Font Awesome для иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6jClt5tQ3z9Dtbx44Sbs3V0KU8tCJOA94yXl8Wix/5CczmdMev5SCl44z3Y5zrdCrV6CbfGk4C9c8qs6s6GQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-p6jClt5tQ3z9Dtbx44Sbs3V0KU8tCJOA94yXl8Wix/5CczmdMev5SCl44z3Y5zrdCrV6CbfGk4C9c8qs6s6GQg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Общие стили */
         body {
@@ -120,9 +123,18 @@
             padding-left: 0;
         }
         .section ul li {
+            position: relative;
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
             animation-delay: 0.2s;
+            margin-bottom: 5px;
+        }
+        .section ul li::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #56b6c2;
+            animation: pulse 2s infinite;
         }
         @keyframes zoomIn {
             from {
@@ -133,13 +145,6 @@
                 transform: scale(1);
                 opacity: 1;
             }
-        }
-        .section ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #56b6c2;
-            animation: pulse 2s infinite;
         }
         .skills ul {
             display: flex;
@@ -299,39 +304,6 @@
             }
         }
     </style>
-    <script>
-        function showLanguage(lang) {
-            // Скрываем все языковые версии
-            var languages = document.getElementsByClassName('language');
-            for (var i = 0; i < languages.length; i++) {
-                languages[i].classList.remove('active');
-            }
-
-            // Отображаем выбранный язык
-            document.getElementById(lang).classList.add('active');
-
-            // Обновляем URL с параметром языка
-            const url = new URL(window.location);
-            url.searchParams.set('lang', lang);
-            window.history.pushState({}, '', url);
-        }
-
-        // Определяем язык из URL при загрузке страницы
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || 'ru'; // Если нет параметра, то по умолчанию русский
-            showLanguage(lang);
-        };
-
-        // Пример вызова функции при выборе языка через кнопки
-        document.querySelectorAll('.language-selector button').forEach(function(button) {
-            button.addEventListener('click', function() {
-                const selectedLang = this.getAttribute('onclick').replace('showLanguage(', '').replace(')', '').replace("'", "").trim();
-                showLanguage(selectedLang);
-            });
-        });
-
-    </script>
 </head>
 <body>
 
@@ -360,36 +332,42 @@
     <div id="en" class="language">
         <div class="section">
             <h2><i class="fas fa-user"></i> Professional Summary</h2>
-            <p>Male, 22 years old, born on April 8, 2002. Residing in Aktobe, Kazakhstan. Ready to relocate to Almaty or Astana, open to business trips.</p>
-            <p>Experienced Full Stack Developer specializing in programming and software development. Open to full-time or part-time remote work.</p>
+            <p>Male, 22 years old, born on April 8, 2002. Based in Aktobe, Kazakhstan. Open to relocation to Almaty or Astana and business trips.</p>
+            <p>Experienced Full Stack Developer with a focus on backend development, but also hands-on frontend skills. Interested in AI, microservices, and DevOps.</p>
         </div>
 
+        <!-- Total Experience in EN -->
         <div class="section">
-            <h2><i class="fas fa-briefcase"></i> Work Experience — 2 years 6 months</h2>
+            <h2><i class="fas fa-briefcase"></i> Work Experience — <span id="total-experience-en"></span></h2>
 
+            <!-- Example of a job block:
+                 data-start="YYYY-MM" data-end="YYYY-MM"  или data-end="present" для текущего момента
+                 Скрипт посчитает кол-во лет и месяцев автоматически.
+            -->
             <div class="job">
                 <h3>Programmer-Developer</h3>
-                <h4>LLP "Center for Innovative Technologies "Өрлеу" · January 2024 — Present (9 months)</h4>
+                <h4>
+                    LLP "Center for Innovative Technologies 'Өрлеу'" ·
+                    <span class="job-period-en" data-start="2024-01" data-end="present"></span>
+                </h4>
                 <ul>
-                    <li>Worked on projects for the Academy of the Ministry of Internal Affairs of the Republic of Kazakhstan (<a href="https://bilimwave.kz" target="_blank">bilimwave.kz</a>, <a href="https://academy.bilimal.kz/" target="_blank">academy.bilimal.kz</a>):
+                    <li>Developing new products from scratch and supporting existing ones.</li>
+                    <li>Debugging and fixing production and test environment issues.</li>
+                    <li>Working with Yii2 (PHP), PostgreSQL, Redis for API and business logic.</li>
+                    <li>Implemented Redis caching for student transcript exports, significantly reducing DB load and speeding up data rendering.</li>
+                    <li>Used Redis key dependencies tied to <code>student_id</code> to update only changed records.</li>
+                    <li>Created and maintained DB migrations in Yii2/PostgreSQL.</li>
+                    <li>Implemented a "Resit Journal" module for students retaking exams; collaborated with a ReactJS frontend developer.</li>
+                    <li>Fixed bugs and made minor frontend updates on ReactJS when needed.</li>
+                    <li>
+                        <strong>AI-Pitchmaker (slides.citorleu.kz):</strong>
                         <ul>
-                            <li>Used Yii2 framework to support and create new modules.</li>
-                            <li>Worked with APIs, GraphQL, and PostgreSQL.</li>
-                        </ul>
-                    </li>
-                    <li>Admin panel for Kostanay Academy (<a href="https://qpa.edu.kz" target="_blank">qpa.edu.kz</a>):
-                        <ul>
-                            <li>Added new modules and functionalities.</li>
-                            <li>Supported existing code in PHP 8 and Yii2.</li>
-                            <li>Worked with PostgreSQL database, performed tasks, and fixes.</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://slides.citorleu.kz" target="_blank">slides.citorleu.kz</a>:
-                        <ul>
-                            <li>Created a web application from scratch for generating presentations using AI and ChatGPT.</li>
-                            <li>Integrated image generation with Stable Diffusion and image search via Google.</li>
-                            <li>Worked in a Docker environment with a FastAPI backend and ReactJS frontend.</li>
-                            <li>Solved all problems and tasks assigned by managers independently.</li>
+                            <li>Set up a FastAPI backend with Python, SQLAlchemy, Pydantic, Alembic.</li>
+                            <li>Integrated JWT authorization for seamless user logins across multiple services.</li>
+                            <li>Introduced Celery + Redis for asynchronous task processing (e.g., generating AI-based presentations) and offloading the main thread.</li>
+                            <li>Built a ReactJS + Redux Toolkit frontend and an admin panel using SQLAdmin.</li>
+                            <li>Occasionally performed DevOps tasks (cron jobs via crontab on the server, log monitoring, restarts) together with the main DevOps specialist.</li>
+                            <li>In-code scheduling via AsyncIOScheduler for daily subscription updates.</li>
                         </ul>
                     </li>
                 </ul>
@@ -397,32 +375,32 @@
 
             <div class="job">
                 <h3>Lead Developer</h3>
-                <h4>TopNetworks HUB · September 2023 — May 2024 (9 months)</h4>
+                <h4>
+                    TopNetworks HUB ·
+                    <span class="job-period-en" data-start="2023-09" data-end="2024-05"></span>
+                </h4>
                 <ul>
-                    <li>Supported a website on WordPress.</li>
-                    <li>Maintained a Telegram bot in JavaScript.</li>
-                    <li>Performed layout design, server work, DevOps tasks, parsing, and SEO optimization.</li>
+                    <li>Maintained a WordPress website and a Telegram bot written in Node.js.</li>
+                    <li>Handled layout, server administration, DevOps tasks, data parsing, and SEO optimization.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Full Stack Developer</h3>
-                <h4>eDauir · July 2023 — December 2023 (6 months)</h4>
+                <h4>
+                    eDauir ·
+                    <span class="job-period-en" data-start="2023-07" data-end="2023-12"></span>
+                </h4>
                 <ul>
-                    <li>Worked with Laravel and PHP 8 (<a href="https://avtomarket.kz" target="_blank">avtomarket.kz</a>).</li>
-                    <li>Deployed VPS (Ubuntu 22.04) with HestiaCP control panel.</li>
-                    <li>Edited ready-made layouts and provided support in Figma.</li>
-                    <li>Developed landing pages using HTML, SCSS, WebPack, and JavaScript.</li>
-                    <li>Created APIs and worked with existing code.</li>
-                    <li>Created and deployed Docker containers using Docker Compose.</li>
-                    <li>Worked with Blade templating engine.</li>
-                    <li>Introduced testing using Appium, Flutter, and Python (assigned tasks and controlled the process).</li>
-                    <li>Documented requests in Postman for PHP scripts (assigned tasks and controlled the process).</li>
-                    <li>Notable Projects:
+                    <li>Built features with Laravel (PHP 8) for <a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a>.</li>
+                    <li>Deployed VPS (Ubuntu 22.04) with HestiaCP, worked on Figma layouts, HTML, SCSS, WebPack, JS landings.</li>
+                    <li>Created APIs, worked with legacy code, used Docker Compose for containerization.</li>
+                    <li>Introduced testing on Appium + Flutter + Python and documented API requests in Postman.</li>
+                    <li>Key projects:
                         <ul>
-                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> - Stack: Flutter, pure PHP, MySQL (support and bug fixes).</li>
-                            <li><a href="https://avtomarket.group" target="_blank">avtomarket.group</a> - Stack: Laravel, MySQL, Docker (added functionality per client's requests).</li>
-                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> - Layout using WebPack and SCSS.</li>
+                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> – Flutter + pure PHP + MySQL (support & bug fixes).</li>
+                            <li><a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a> – Laravel + MySQL + Docker (added custom functionalities).</li>
+                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> – Layout with WebPack + SCSS.</li>
                         </ul>
                     </li>
                 </ul>
@@ -430,33 +408,41 @@
 
             <div class="job">
                 <h3>Web Developer</h3>
-                <h4><a href="https://halykmart.kz" target="_blank">halykmart.kz</a> · February 2023 — July 2023 (6 months)</h4>
+                <h4>
+                    <a href="https://halykmart.kz" target="_blank">halykmart.kz</a> ·
+                    <span class="job-period-en" data-start="2023-02" data-end="2023-07"></span>
+                </h4>
                 <ul>
-                    <li>Optimization and caching setup.</li>
-                    <li>Supported and developed an online store on WordPress.</li>
-                    <li>Performed data parsing using Python.</li>
-                    <li>Uploaded data to the website.</li>
+                    <li>Optimized and set up caching.</li>
+                    <li>Supported a WordPress-based online store.</li>
+                    <li>Performed data parsing in Python and handled data uploads.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Technical Support Specialist</h3>
-                <h4>AsiaBusinessAccounting · January 2023 — February 2023 (2 months)</h4>
+                <h4>
+                    AsiaBusinessAccounting ·
+                    <span class="job-period-en" data-start="2023-01" data-end="2023-02"></span>
+                </h4>
                 <ul>
-                    <li>Installed Umag software.</li>
-                    <li>Configured 1C cash registers.</li>
+                    <li>Installed and configured Umag software.</li>
+                    <li>Set up 1C-based cash registers.</li>
                     <li>Trained users and provided technical support.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Individual Entrepreneur</h3>
-                <h4>EOS · April 2021 — December 2021 (9 months)</h4>
+                <h4>
+                    EOS ·
+                    <span class="job-period-en" data-start="2021-04" data-end="2021-12"></span>
+                </h4>
                 <ul>
-                    <li>Communicated with clients, performed layout design, and created APIs.</li>
-                    <li>Developed web applications and learned new materials.</li>
-                    <li>Worked with Django REST API, ReactJS, Linux, Gunicorn, and Redux.</li>
-                    <li>Collaborated with a designer to create design ideas.</li>
+                    <li>Interacted with clients, performed layouts, and created APIs.</li>
+                    <li>Developed web applications and explored new technologies.</li>
+                    <li>Used Django REST, ReactJS, Linux, Gunicorn, Redux.</li>
+                    <li>Collaborated with designers for UI/UX ideas.</li>
                 </ul>
             </div>
         </div>
@@ -478,14 +464,12 @@
                 <li><i class="fab fa-docker"></i> Docker</li>
                 <li><i class="fab fa-laravel"></i> Laravel</li>
                 <li><i class="fab fa-linux"></i> Linux</li>
-                <li><i class="fas fa-user-friends"></i> Friendly</li>
-                <li><i class="fas fa-comments"></i> Communicative</li>
-                <li><i class="fas fa-code-branch"></i> Working with existing code</li>
-                <li><i class="fas fa-server"></i> Setting up VPS/VDS servers</li>
+                <li><i class="fas fa-code-branch"></i> Working with legacy code</li>
+                <li><i class="fas fa-server"></i> VPS/VDS Setup</li>
                 <li><i class="fas fa-database"></i> Databases</li>
                 <li><i class="fas fa-object-group"></i> OOP</li>
                 <li><i class="fas fa-database"></i> PostgreSQL</li>
-                <li><i class="fa-brands fa-git-alt"></i> Git</li>
+                <li><i class="fab fa-git-alt"></i> Git</li>
                 <li><i class="fab fa-docker-compose"></i> Docker Compose</li>
                 <li><i class="fas fa-project-diagram"></i> OOP Design Patterns</li>
                 <li><i class="fas fa-database"></i> MySQL</li>
@@ -494,102 +478,60 @@
             </ul>
         </div>
 
-        <!-- Раздел Портфолио -->
+        <!-- Portfolio Section -->
         <div class="section portfolio">
             <h2><i class="fas fa-briefcase"></i> Portfolio</h2>
             <div class="portfolio-grid">
-                <div class="section portfolio">
-                    <div class="portfolio-grid">
-                        <!-- Kostanay MIA Academy Site -->
-                        <div class="portfolio-item">
-                            <img src="./kostacademy.citorleu.kz_.png" alt="Kostanay MIA Academy Site">
-                            <h4><i class="fas fa-project-diagram"></i> Kostanay MIA Academy Site</h4>
-                            <p>A project for the Kostanay MIA Academy, including new modules and improvements to the admin panel using Yii2 and PostgreSQL.</p>
-                            <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-
-                        <!-- Karaganda MIA Academy Site -->
-                        <div class="portfolio-item">
-                            <img src="./academy.bilimal.kz_.png" alt="Karaganda MIA Academy Site">
-                            <h4><i class="fas fa-project-diagram"></i> Karaganda MIA Academy Site</h4>
-                            <p>A project for the Karaganda MIA Academy, working with APIs and GraphQL to support the academy's information system.</p>
-                            <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-
-                        <!-- Slides.citorleu.kz -->
-                        <div class="portfolio-item">
-                            <img src="./slides.citorleu.kz_.png" alt="Slides.citorleu.kz">
-                            <h4><i class="fas fa-project-diagram"></i> Slides.citorleu.kz</h4>
-                            <p>Developed a web application for generating presentations using AI and ChatGPT, integrated with Stable Diffusion and Google Image Search.</p>
-                            <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-
-<!--                        &lt;!&ndash; visite.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/visite.png" alt="visite.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> visite.kz</h4>-->
-<!--                            <p>Supported and fixed bugs for visite.kz using Flutter, pure PHP, and MySQL.</p>-->
-<!--                            <a href="https://visite.kz" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; avtomarket.group &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/avtomarket.png" alt="avtomarket.group">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> avtomarket.group</h4>-->
-<!--                            <p>Added functionalities to avtomarket.group using Laravel, MySQL, and Docker based on client requests.</p>-->
-<!--                            <a href="https://avtomarket.group" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; uplawyers.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/uplawyers.png" alt="uplawyers.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> uplawyers.kz</h4>-->
-<!--                            <p>Developed layouts for uplawyers.kz using WebPack and SCSS.</p>-->
-<!--                            <a href="https://uplawyers.kz" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; halykmart.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/halykmart.png" alt="halykmart.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> halykmart.kz</h4>-->
-<!--                            <p>Optimized and set up caching for halykmart.kz, developed and maintained the online store on WordPress, and handled data parsing using Python.</p>-->
-<!--                            <a href="https://halykmart.kz" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>-->
-<!--                        </div>-->
-
-                        <!-- Add more projects as needed -->
-                    </div>
+                <!-- Kostanay MIA Academy Site -->
+                <div class="portfolio-item">
+                    <img src="./kostacademy.citorleu.kz_.png" alt="Kostanay MIA Academy Site">
+                    <h4><i class="fas fa-project-diagram"></i> Kostanay MIA Academy Site</h4>
+                    <p>A project for the Kostanay MIA Academy, including new modules and enhancements to the admin panel using Yii2 and PostgreSQL.</p>
+                    <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
                 </div>
 
-                <!-- Добавьте больше проектов по аналогии -->
+                <!-- Karaganda MIA Academy Site -->
+                <div class="portfolio-item">
+                    <img src="./academy.bilimal.kz_.png" alt="Karaganda MIA Academy Site">
+                    <h4><i class="fas fa-project-diagram"></i> Karaganda MIA Academy Site</h4>
+                    <p>Project for the Karaganda MIA Academy, including API and GraphQL support for the academy's information system.</p>
+                    <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+
+                <!-- Slides.citorleu.kz -->
+                <div class="portfolio-item">
+                    <img src="./slides.citorleu.kz_.png" alt="Slides.citorleu.kz">
+                    <h4><i class="fas fa-project-diagram"></i> Slides.citorleu.kz</h4>
+                    <p>Developed from scratch for generating AI-based presentations using ChatGPT, integrated with Stable Diffusion and Google Image Search.</p>
+                    <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
             </div>
         </div>
 
         <div class="section portfolio">
-            <h2><i class="fas fa-briefcase"></i> My Personal Projects</h2>
+            <h2><i class="fas fa-briefcase"></i> Personal Projects</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Presentation Editor (In Development)</h4>
-                    <p>A web application for creating and editing presentations, built with React and Redux Toolkit for state management. Focused on providing a flexible user interface.</p>
+                    <p>A web application for creating and editing presentations, built with React and Redux Toolkit. Focuses on flexibility of the user interface.</p>
                     <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Website</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> E-commerce on Golang (In Development)</h4>
-                    <p>A platform for e-commerce with a backend built on Golang, utilizing tools like GORM for database management and Docker for environment setup.</p>
+                    <p>A platform for e-commerce with a Go-based backend, using GORM for database management and Docker for environment setup.</p>
                     <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Business Card Website for Lawyers</h4>
-                    <p>A minimalist business card website with a responsive design aimed at presenting legal services. Built with modern technologies for optimized content loading and display.</p>
+                    <p>A minimalist business card site with a responsive design aimed at presenting legal services. Uses modern technologies for optimal loading and display.</p>
                     <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Website</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
                 </div>
             </div>
         </div>
 
-
-
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
-            <p>My GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
+            <p>GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
         </div>
     </div>
 
@@ -597,36 +539,38 @@
     <div id="ru" class="language active">
         <div class="section">
             <h2><i class="fas fa-user"></i> Профессиональное Резюме</h2>
-            <p>Мужчина, 22 года, родился 8 апреля 2002 года. Проживает в Актобе, Казахстан. Готов к переезду в Алматы или Астану, готов к командировкам.</p>
-            <p>Опытный Full Stack Developer, специализация: программист, разработчик. Рассматриваю полную или частичную занятость, удаленную работу.</p>
+            <p>Мужчина, 22 года, дата рождения: 8 апреля 2002 года. Проживает в Актобе, Казахстан. Готов к переезду в Алматы или Астану, а также к командировкам.</p>
+            <p>Опытный Full Stack-разработчик с упором на бэкенд, при необходимости выполняю задачи и на фронтенде. Интересуюсь разработкой ИИ, микросервисами и DevOps.</p>
         </div>
 
+        <!-- Общий стаж по-русски -->
         <div class="section">
-            <h2><i class="fas fa-briefcase"></i> Опыт Работы — 2 года 6 месяцев</h2>
+            <h2><i class="fas fa-briefcase"></i> Опыт Работы — <span id="total-experience-ru"></span></h2>
 
             <div class="job">
                 <h3>Программист-разработчик</h3>
-                <h4>ТОО «Центр Инновационных Технологий «Өрлеу» · Январь 2024 — настоящее время (9 месяцев)</h4>
+                <h4>
+                    ТОО «Центр Инновационных Технологий «Өрлеу» ·
+                    <span class="job-period-ru" data-start="2024-01" data-end="present"></span>
+                </h4>
                 <ul>
-                    <li>Проекты для Академии МВД РК (<a href="https://bilimwave.kz" target="_blank">bilimwave.kz</a>, <a href="https://academy.bilimal.kz/" target="_blank">academy.bilimal.kz</a>):
+                    <li>Разработка новых продуктов с нуля и поддержка существующих решений.</li>
+                    <li>Поиск и устранение ошибок на продакшене и тестовых стендах.</li>
+                    <li>Работа с Yii2 (PHP), PostgreSQL, Redis для API и бизнес-логики.</li>
+                    <li>Внедрил кэширование в Redis для выгрузки транскриптов оценок, значительно снизив нагрузку на БД и ускорив отображение данных.</li>
+                    <li>Применил зависимости кэша по <code>student_id</code>, чтобы обновлять только изменившиеся записи.</li>
+                    <li>Создавал и поддерживал миграции в Yii2/PostgreSQL.</li>
+                    <li>Реализовал модуль «Журнал переводников» для отслеживания пересдач экзаменов; взаимодействовал с фронтенд-разработчиком на ReactJS.</li>
+                    <li>Исправлял баги и при необходимости дорабатывал фронтенд-функционал на ReactJS.</li>
+                    <li>
+                        <strong>AI-Pitchmaker (slides.citorleu.kz):</strong>
                         <ul>
-                            <li>Работал с Yii2, поддержка и создание новых модулей.</li>
-                            <li>Работал с API, GraphQL, PostgreSQL.</li>
-                        </ul>
-                    </li>
-                    <li>Админка сайта Костанайской академии (<a href="https://qpa.edu.kz" target="_blank">qpa.edu.kz</a>):
-                        <ul>
-                            <li>Дополнение новых модулей функциональностью.</li>
-                            <li>Поддержка существующего кода на PHP 8, Yii2.</li>
-                            <li>Работа с базой данных PostgreSQL, выполнение задач и правок.</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://slides.citorleu.kz" target="_blank">slides.citorleu.kz</a>:
-                        <ul>
-                            <li>Создание с нуля веб-приложения для генерации презентаций с помощью ИИ и ChatGPT.</li>
-                            <li>Добавил генерацию изображений с помощью Stable Diffusion и поиск изображений через Google.</li>
-                            <li>Работа в среде Docker, Backend - FastAPI, frontend - ReactJS.</li>
-                            <li>Решал все проблемы и задачи менеджеров самостоятельно.</li>
+                            <li>Настроил backend на FastAPI (Python), использовал SQLAlchemy, Pydantic, Alembic.</li>
+                            <li>Интегрировал JWT-авторизацию для единого входа пользователей между сервисами.</li>
+                            <li>Добавил Celery + Redis для асинхронной обработки задач (генерация презентаций на ИИ) и разгрузки основного потока.</li>
+                            <li>Реализовал frontend на ReactJS + Redux Toolkit, админ-панель на SQLAdmin.</li>
+                            <li>Иногда выполнял DevOps-задачи (настройка cron-задач через crontab, проверка логов, рестарт приложения) в сотрудничестве с DevOps-специалистом.</li>
+                            <li>Организовал планировщик через AsyncIOScheduler для ежедневного обновления подписок.</li>
                         </ul>
                     </li>
                 </ul>
@@ -634,32 +578,32 @@
 
             <div class="job">
                 <h3>Ведущий разработчик</h3>
-                <h4>TopNetworks HUB · Сентябрь 2023 — Май 2024 (9 месяцев)</h4>
+                <h4>
+                    TopNetworks HUB ·
+                    <span class="job-period-ru" data-start="2023-09" data-end="2024-05"></span>
+                </h4>
                 <ul>
-                    <li>Поддержка сайта на WordPress.</li>
-                    <li>Поддержка Telegram-бота на JavaScript.</li>
-                    <li>Верстка, работа с сервером, DevOps, парсинг, оптимизация SEO.</li>
+                    <li>Поддержка сайта на WordPress и Telegram-бота на Node.js.</li>
+                    <li>Занимался вёрсткой, администрированием сервера, DevOps, парсингом, SEO-оптимизацией.</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Full Stack Developer</h3>
-                <h4>eDauir · Июль 2023 — Декабрь 2023 (6 месяцев)</h4>
+                <h3>Full Stack-разработчик</h3>
+                <h4>
+                    eDauir ·
+                    <span class="job-period-ru" data-start="2023-07" data-end="2023-12"></span>
+                </h4>
                 <ul>
-                    <li>Работа с Laravel, PHP 8 (<a href="https://avtomarket.kz" target="_blank">avtomarket.kz</a>).</li>
-                    <li>Развертывание VPS (Ubuntu 22.04) с панелью HestiaCP.</li>
-                    <li>Редактирование макетов и поддержка в Figma.</li>
-                    <li>Верстка лендингов на HTML, SCSS, WebPack, JavaScript.</li>
-                    <li>Создание API, работа с чужим кодом.</li>
-                    <li>Создание и развертывание Docker-контейнеров с помощью Docker Compose.</li>
-                    <li>Работа с шаблонизатором Blade.</li>
-                    <li>Ввел тестирование на Appium, Flutter, Python (назначал задачи и контролировал процесс).</li>
-                    <li>Документация запросов в Postman для PHP-скриптов (назначал задачи и контролировал процесс).</li>
-                    <li>Значимые проекты:
+                    <li>Работал с Laravel (PHP 8) для <a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a>.</li>
+                    <li>Разворачивал VPS (Ubuntu 22.04) с HestiaCP, редактировал макеты в Figma, вёрстал на HTML, SCSS, WebPack, JS.</li>
+                    <li>Создавал API, работал с чужим кодом, использовал Docker Compose для контейнеризации.</li>
+                    <li>Внедрил тестирование на Appium + Flutter + Python, задокументировал API в Postman.</li>
+                    <li>Ключевые проекты:
                         <ul>
-                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> - Стек: Flutter, чистый PHP, MySQL (поддержка и багфикс).</li>
-                            <li><a href="https://avtomarket.group" target="_blank">avtomarket.group</a> - Стек: Laravel, MySQL, Docker (добавлял функционал по желанию заказчика).</li>
-                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> - Верстка на WebPack и SCSS.</li>
+                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> – Flutter + чистый PHP + MySQL (поддержка и багфиксы).</li>
+                            <li><a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a> – Laravel + MySQL + Docker (добавление функционала по требованию заказчика).</li>
+                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> – верстка на WebPack + SCSS.</li>
                         </ul>
                     </li>
                 </ul>
@@ -667,20 +611,25 @@
 
             <div class="job">
                 <h3>Web-разработчик</h3>
-                <h4><a href="https://halykmart.kz" target="_blank">halykmart.kz</a> · Февраль 2023 — Июль 2023 (6 месяцев)</h4>
+                <h4>
+                    <a href="https://halykmart.kz" target="_blank">halykmart.kz</a> ·
+                    <span class="job-period-ru" data-start="2023-02" data-end="2023-07"></span>
+                </h4>
                 <ul>
                     <li>Оптимизация и настройка кэширования.</li>
                     <li>Поддержка и разработка интернет-магазина на WordPress.</li>
-                    <li>Парсинг с помощью Python.</li>
-                    <li>Загрузка данных на сайт.</li>
+                    <li>Парсинг данных на Python, загрузка на сайт.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Специалист технической поддержки</h3>
-                <h4>АзияБизнесУчет · Январь 2023 — Февраль 2023 (2 месяца)</h4>
+                <h4>
+                    АзияБизнесУчет ·
+                    <span class="job-period-ru" data-start="2023-01" data-end="2023-02"></span>
+                </h4>
                 <ul>
-                    <li>Установка программного обеспечения Umag.</li>
+                    <li>Установка и настройка ПО Umag.</li>
                     <li>Настройка касс 1С.</li>
                     <li>Обучение пользователей, техническая поддержка.</li>
                 </ul>
@@ -688,12 +637,15 @@
 
             <div class="job">
                 <h3>Индивидуальный предприниматель</h3>
-                <h4>EOS · Апрель 2021 — Декабрь 2021 (9 месяцев)</h4>
+                <h4>
+                    EOS ·
+                    <span class="job-period-ru" data-start="2021-04" data-end="2021-12"></span>
+                </h4>
                 <ul>
-                    <li>Взаимодействие с клиентами, верстка, создание API.</li>
-                    <li>Создание веб-приложений, изучение нового материала.</li>
-                    <li>Django REST API, ReactJS, Linux, Gunicorn, Redux.</li>
-                    <li>Работа с дизайнером, создание дизайнерских идей.</li>
+                    <li>Работа с клиентами, вёрстка, создание API.</li>
+                    <li>Разработка веб-приложений, изучение новых технологий.</li>
+                    <li>Django REST, ReactJS, Linux, Gunicorn, Redux.</li>
+                    <li>Совместная работа с дизайнером.</li>
                 </ul>
             </div>
         </div>
@@ -701,7 +653,7 @@
         <div class="section skills">
             <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
             <p>Актюбинский высший политехнический колледж · 2021</p>
-            <p>Информационные технологии, Веб-разработчик</p>
+            <p>Информационные технологии, Веб-разработка</p>
         </div>
 
         <div class="section skills">
@@ -715,15 +667,13 @@
                 <li><i class="fab fa-docker"></i> Docker</li>
                 <li><i class="fab fa-laravel"></i> Laravel</li>
                 <li><i class="fab fa-linux"></i> Linux</li>
-                <li><i class="fas fa-user-friends"></i> Достық</li>
-                <li><i class="fas fa-comments"></i> Коммуникабельность</li>
                 <li><i class="fas fa-code-branch"></i> Работа с чужим кодом</li>
-                <li><i class="fas fa-server"></i> Настройка VPS/VDS серверов</li>
+                <li><i class="fas fa-server"></i> Настройка VPS/VDS</li>
                 <li><i class="fas fa-database"></i> Базы данных</li>
                 <li><i class="fas fa-object-group"></i> ООП</li>
                 <li><i class="fas fa-database"></i> PostgreSQL</li>
-                <li><i class="fas fa-git-alt"></i> Git</li>
-                <li><i class="fab fa-docker-compose"></i> Docker-compose</li>
+                <li><i class="fab fa-git-alt"></i> Git</li>
+                <li><i class="fab fa-docker-compose"></i> Docker Compose</li>
                 <li><i class="fas fa-project-diagram"></i> Паттерны проектирования ООП</li>
                 <li><i class="fas fa-database"></i> MySQL</li>
                 <li><i class="fas fa-code"></i> PSR-12</li>
@@ -731,97 +681,51 @@
             </ul>
         </div>
 
-        <!-- Раздел Портфолио -->
+        <!-- Портфолио -->
         <div class="section portfolio">
             <h2><i class="fas fa-briefcase"></i> Портфолио</h2>
             <div class="portfolio-grid">
-                <div class="section portfolio">
-                    <div class="portfolio-grid">
-                        <!-- Костанайский сайт МВД -->
-                        <div class="portfolio-item">
-                            <img src="./kostacademy.citorleu.kz_.png" alt="Костанайский сайт МВД">
-                            <h4><i class="fas fa-project-diagram"></i> Костанайский сайт МВД</h4>
-                            <p>Проект для Костанайской Академии МВД, включающий новые модули и улучшения административной панели с использованием Yii2 и PostgreSQL.</p>
-                            <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
-                        </div>
-
-                        <!-- Карагандинская академия МВД -->
-                        <div class="portfolio-item">
-                            <img src="./academy.bilimal.kz_.png" alt="Карагандинская академия МВД">
-                            <h4><i class="fas fa-project-diagram"></i> Карагандинская академия МВД</h4>
-                            <p>Проект для Карагандинской Академии МВД, включающий работу с API и GraphQL для поддержки информационной системы академии.</p>
-                            <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
-                        </div>
-
-                        <!-- Slides.citorleu.kz -->
-                        <div class="portfolio-item">
-                            <img src="./slides.citorleu.kz_.png" alt="Slides.citorleu.kz">
-                            <h4><i class="fas fa-project-diagram"></i> Slides.citorleu.kz</h4>
-                            <p>Создание веб-приложения для генерации презентаций с помощью ИИ и ChatGPT, интеграция с Stable Diffusion и поиском изображений через Google.</p>
-                            <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
-                        </div>
-
-<!--                        &lt;!&ndash; visite.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/visite.png" alt="visite.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> visite.kz</h4>-->
-<!--                            <p>Поддержка и исправление багов для visite.kz с использованием Flutter, чистого PHP и MySQL.</p>-->
-<!--                            <a href="https://visite.kz" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; avtomarket.group &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/avtomarket.png" alt="avtomarket.group">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> avtomarket.group</h4>-->
-<!--                            <p>Добавление функционала в avtomarket.group с использованием Laravel, MySQL и Docker по запросам клиентов.</p>-->
-<!--                            <a href="https://avtomarket.group" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; uplawyers.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/uplawyers.png" alt="uplawyers.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> uplawyers.kz</h4>-->
-<!--                            <p>Разработка верстки для uplawyers.kz с использованием WebPack и SCSS.</p>-->
-<!--                            <a href="https://uplawyers.kz" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; halykmart.kz &ndash;&gt;-->
-<!--                        <div class="portfolio-item">-->
-<!--                            <img src="path/to/your/halykmart.png" alt="halykmart.kz">-->
-<!--                            <h4><i class="fas fa-project-diagram"></i> halykmart.kz</h4>-->
-<!--                            <p>Оптимизация и настройка кэширования для halykmart.kz, разработка и поддержка интернет-магазина на WordPress, парсинг данных с помощью Python.</p>-->
-<!--                            <a href="https://halykmart.kz" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>-->
-<!--                        </div>-->
-
-                        <!-- Добавьте больше проектов по аналогии -->
-                    </div>
+                <div class="portfolio-item">
+                    <img src="./kostacademy.citorleu.kz_.png" alt="Костанайская академия МВД">
+                    <h4><i class="fas fa-project-diagram"></i> Костанайская академия МВД</h4>
+                    <p>Проект для Костанайской академии МВД: новые модули и доработка админки на Yii2 и PostgreSQL.</p>
+                    <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
                 </div>
-
-                <!-- Добавьте больше проектов по аналогии -->
+                <div class="portfolio-item">
+                    <img src="./academy.bilimal.kz_.png" alt="Карагандинская академия МВД">
+                    <h4><i class="fas fa-project-diagram"></i> Карагандинская академия МВД</h4>
+                    <p>Проект для Карагандинской академии МВД с поддержкой API, GraphQL и информационной системы академии.</p>
+                    <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./slides.citorleu.kz_.png" alt="Slides.citorleu.kz">
+                    <h4><i class="fas fa-project-diagram"></i> Slides.citorleu.kz</h4>
+                    <p>Веб-приложение для генерации презентаций с использованием ИИ (ChatGPT), интегрировано со Stable Diffusion и Google Image Search.</p>
+                    <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
+                </div>
             </div>
         </div>
 
         <div class="section portfolio">
-            <h2><i class="fas fa-briefcase"></i> Мои Личные Проекты</h2>
+            <h2><i class="fas fa-briefcase"></i> Личные проекты</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Редактор презентаций (в разработке)</h4>
-                    <p>Веб-приложение для создания и редактирования презентаций, построенное на React и Redux Toolkit для удобного управления состоянием. Основное внимание уделено гибкости пользовательского интерфейса.</p>
+                    <p>Веб-приложение для создания и редактирования презентаций (React, Redux Toolkit). Упор на гибкость UI.</p>
                     <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Интернет-магазин на Golang (в разработке)</h4>
-                    <p>Платформа для электронной коммерции с серверной частью на Golang. Используются современные инструменты вроде GORM для работы с базой данных и Docker для управления окружением.</p>
+                    <p>Платформа для e-commerce на Go, использующая GORM и Docker для развёртывания.</p>
                     <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Сайт-визитка для юристов</h4>
-                    <p>Минималистичный сайт-визитка с адаптивным дизайном, ориентированным на представление юридических услуг. Используются современные технологии для оптимизации загрузки и отображения контента.</p>
+                    <p>Минималистичный сайт с адаптивным дизайном для представления юридических услуг. Используются современные технологии для быстрой загрузки.</p>
                     <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
                 </div>
             </div>
         </div>
-
 
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Дополнительная Информация</h2>
@@ -833,36 +737,38 @@
     <div id="kz" class="language">
         <div class="section">
             <h2><i class="fas fa-user"></i> Кәсіби Қысқаша Мазмұны</h2>
-            <p>Ер адам, 22 жаста, 2002 жылдың 8 сәуірінде туған. Ақтөбе қаласында тұрады, Қазақстан. Алматы немесе Астана қалаларына көшуге дайын, іссапарларға дайын.</p>
-            <p>Тәжірибелі Full Stack Developer, мамандануы: бағдарламашы, әзірлеуші. Толық немесе жартылай жұмысбастылықты, қашықтан жұмыс істеуді қарастырамын.</p>
+            <p>Ер адам, 22 жаста, 2002 жылдың 8 сәуірінде туған. Ақтөбе қаласында тұрады, Қазақстан. Алматы немесе Астана қаласына көшуге, іссапарларға дайын.</p>
+            <p>Full Stack Developer (негізгі бағытым – backend), қажет болғанда frontend-те де жұмыс істеймін. ЖИ, микросервистік архитектура және DevOps салаларына қызығушылық бар.</p>
         </div>
 
+        <!-- Жалпы тәжірибе (қазақ тілінде) -->
         <div class="section">
-            <h2><i class="fas fa-briefcase"></i> Жұмыс Тәжірибесі — 2 жыл 6 ай</h2>
+            <h2><i class="fas fa-briefcase"></i> Жұмыс Тәжірибесі — <span id="total-experience-kz"></span></h2>
 
             <div class="job">
                 <h3>Бағдарламашы-әзірлеуші</h3>
-                <h4>"Өрлеу" Инновациялық Технологиялар Орталығы ЖШС · Қаңтар 2024 — Қазіргі уақытқа дейін (9 ай)</h4>
+                <h4>
+                    "Өрлеу" Инновациялық Технологиялар Орталығы ЖШС ·
+                    <span class="job-period-kz" data-start="2024-01" data-end="present"></span>
+                </h4>
                 <ul>
-                    <li>ҚР ІІМ Академиясы жобалары (<a href="https://bilimwave.kz" target="_blank">bilimwave.kz</a>, <a href="https://academy.bilimal.kz/" target="_blank">academy.bilimal.kz</a>):
+                    <li>Жаңа өнімдерді нөлден бастап әзірлеу және қолданыстағы шешімдерді қолдау.</li>
+                    <li>Өндірістік (продакшн) және тесттік ортадағы қателерді іздеу және түзету.</li>
+                    <li>Yii2 (PHP), PostgreSQL, Redis арқылы API мен бизнес-логика әзірлеу.</li>
+                    <li>Студенттің бағаларын экспорттау барысында DB жүктемесін төмендету үшін Redis кэштеуін енгіздім.</li>
+                    <li><code>student_id</code> бойынша тәуелділікті қолданып, тек өзгерген жазбаларды жаңарту тәсілін қолдандым.</li>
+                    <li>Yii2/PostgreSQL-те миграцияларды жасап, қолдап отырдым.</li>
+                    <li>Емтиханды қайта тапсыратын студенттерді бақылау үшін «Журнал переводников» модулін жасадым; ReactJS-пен жұмыс істейтін frontend-дизайнермен бірлесе жұмыс істедім.</li>
+                    <li>ReactJS-тағы кейбір қателерді түзетіп, қажет болған жағдайда фронтендті жетілдірдім.</li>
+                    <li>
+                        <strong>AI-Pitchmaker (slides.citorleu.kz):</strong>
                         <ul>
-                            <li>Yii2 фреймворкін пайдаланып жаңа модульдерді қолдау және жасау.</li>
-                            <li>API, GraphQL, PostgreSQL-пен жұмыс істеу.</li>
-                        </ul>
-                    </li>
-                    <li>Қостанай академиясының сайт админкасы (<a href="https://qpa.edu.kz" target="_blank">qpa.edu.kz</a>):
-                        <ul>
-                            <li>Жаңа модульдерді функционалмен толықтыру.</li>
-                            <li>PHP 8, Yii2-де бар кодты қолдау.</li>
-                            <li>PostgreSQL деректер базасымен жұмыс, тапсырмаларды орындау және түзетулер енгізу.</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://slides.citorleu.kz" target="_blank">slides.citorleu.kz</a>:
-                        <ul>
-                            <li>AI және ChatGPT қолдана отырып, презентацияларды генерациялау үшін веб-қосымша жасау.</li>
-                            <li>Stable Diffusion арқылы сурет генерациясын және Google арқылы сурет іздеуді қосу.</li>
-                            <li>Docker ортасында жұмыс, Backend - FastAPI, frontend - ReactJS.</li>
-                            <li>Менеджерлер қойған барлық мәселелер мен тапсырмаларды өз бетіммен шештім.</li>
+                            <li>FastAPI (Python), SQLAlchemy, Pydantic, Alembic негізінде backend орнаттым.</li>
+                            <li>Бірнеше сервис арасында бірыңғай авторизация үшін JWT-ті біріктірдім.</li>
+                            <li>Негізгі ағынды босату үшін Celery + Redis арқылы асинхронды тапсырмалар жүйесін қостым (ИИ-презентацияларды генерациялау).</li>
+                            <li>ReactJS + Redux Toolkit-те фронтендті әзірледім, SQLAdmin админ-панелін орнаттым.</li>
+                            <li>Кейде DevOps-әзірлеушімен бірлесе серверге қатысты жұмыстарды (cron баптау, логтарды тексеру, қолданбаны қайта іске қосу) атқарамын.</li>
+                            <li>AsyncIOScheduler арқылы күнделікті жазылуларды жаңартуды жоспарлауды орнаттым.</li>
                         </ul>
                     </li>
                 </ul>
@@ -870,32 +776,32 @@
 
             <div class="job">
                 <h3>Жетекші әзірлеуші</h3>
-                <h4>TopNetworks HUB · Қыркүйек 2023 — Мамыр 2024 (9 ай)</h4>
+                <h4>
+                    TopNetworks HUB ·
+                    <span class="job-period-kz" data-start="2023-09" data-end="2024-05"></span>
+                </h4>
                 <ul>
-                    <li>WordPress сайтты қолдау.</li>
-                    <li>JavaScript-тағы Telegram ботты қолдау.</li>
-                    <li>Верстка, сервермен жұмыс, DevOps, парсинг, SEO оңтайландыру.</li>
+                    <li>WordPress-тағы сайтты және Nodejs-тағы Telegram-ботты қолдау.</li>
+                    <li>Верстка, сервер әкімшілігі, DevOps, парсинг, SEO оңтайландыру.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Full Stack Developer</h3>
-                <h4>eDauir · Шілде 2023 — Желтоқсан 2023 (6 ай)</h4>
+                <h4>
+                    eDauir ·
+                    <span class="job-period-kz" data-start="2023-07" data-end="2023-12"></span>
+                </h4>
                 <ul>
-                    <li>Laravel, PHP 8-пен жұмыс (<a href="https://avtomarket.kz" target="_blank">avtomarket.kz</a>).</li>
-                    <li>HestiaCP басқару панелімен VPS (Ubuntu 22.04) орнату.</li>
-                    <li>Дайын макеттерді редакциялау және Figma-да қолдау.</li>
-                    <li>HTML, SCSS, WebPack, JavaScript пайдаланып лендингтер жасау.</li>
-                    <li>API жасау, басқа кодпен жұмыс істеу.</li>
-                    <li>Docker Compose арқылы Docker-контейнерлерді жасау және орнату.</li>
-                    <li>Blade шаблонизаторымен жұмыс.</li>
-                    <li>Appium, Flutter, Python пайдаланып тестілеуді енгізу (тапсырмаларды тағайындау және процесті бақылау).</li>
-                    <li>PHP скриптіне арналған Postman-дағы сұрауларды құжаттау (тапсырмаларды тағайындау және процесті бақылау).</li>
-                    <li>Маңызды жобалар:
+                    <li>Laravel (PHP 8) арқылы <a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a>-ке функционал қостым.</li>
+                    <li>VPS (Ubuntu 22.04) орнаттым (HestiaCP), Figma-дағы макеттерді өңдедім, HTML, SCSS, WebPack, JS арқылы лендинг жасадым.</li>
+                    <li>API жасадым, бөтен кодпен жұмыс істедім, Docker Compose пайдаландым.</li>
+                    <li>Appium + Flutter + Python арқылы тестілеуді енгіздім, Postman-да API сұрауларын құжаттадым.</li>
+                    <li>Негізгі жобалар:
                         <ul>
-                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> - Стек: Flutter, таза PHP, MySQL (қолдау және қателерді түзету).</li>
-                            <li><a href="https://avtomarket.group" target="_blank">avtomarket.group</a> - Стек: Laravel, MySQL, Docker (тапсырыс берушінің қалауы бойынша функционал қосу).</li>
-                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> - WebPack және SCSS-та верстка.</li>
+                            <li><a href="https://visite.kz" target="_blank">visite.kz</a> – Flutter + таза PHP + MySQL (қолдау және қателерді түзету).</li>
+                            <li><a href="https://gitlab.com/murat.kosshi/laraclassifier_qainar" target="_blank">avtomarket.group</a> – Laravel + MySQL + Docker (тапсырыс беруші талабына сай функционал қосу).</li>
+                            <li><a href="https://uplawyers.kz" target="_blank">uplawyers.kz</a> – WebPack + SCSS көмегімен верстка.</li>
                         </ul>
                     </li>
                 </ul>
@@ -903,20 +809,25 @@
 
             <div class="job">
                 <h3>Web-әзірлеуші</h3>
-                <h4><a href="https://halykmart.kz" target="_blank">halykmart.kz</a> · Ақпан 2023 — Шілде 2023 (6 ай)</h4>
+                <h4>
+                    <a href="https://halykmart.kz" target="_blank">halykmart.kz</a> ·
+                    <span class="job-period-kz" data-start="2023-02" data-end="2023-07"></span>
+                </h4>
                 <ul>
                     <li>Оңтайландыру және кэштеуді баптау.</li>
-                    <li>WordPress-та интернет-дүкенді қолдау және әзірлеу.</li>
-                    <li>Python арқылы парсинг.</li>
-                    <li>Сайтқа деректерді жүктеу.</li>
+                    <li>WordPress-та интернет-дүкенді қолдау және дамыту.</li>
+                    <li>Python арқылы деректерді парсинг жасау, сайтқа жүктеу.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Техникалық қолдау маманы</h3>
-                <h4>АзияБизнесУчет · Қаңтар 2023 — Ақпан 2023 (2 ай)</h4>
+                <h4>
+                    АзияБизнесУчет ·
+                    <span class="job-period-kz" data-start="2023-01" data-end="2023-02"></span>
+                </h4>
                 <ul>
-                    <li>Umag бағдарламалық қамтамасыз етуді орнату.</li>
+                    <li>Umag бағдарламалық қамтылымын орнату және баптау.</li>
                     <li>1С кассаларын баптау.</li>
                     <li>Пайдаланушыларды оқыту, техникалық қолдау көрсету.</li>
                 </ul>
@@ -924,24 +835,27 @@
 
             <div class="job">
                 <h3>Жеке кәсіпкер</h3>
-                <h4>EOS · Сәуір 2021 — Желтоқсан 2021 (9 ай)</h4>
+                <h4>
+                    EOS ·
+                    <span class="job-period-kz" data-start="2021-04" data-end="2021-12"></span>
+                </h4>
                 <ul>
-                    <li>Клиенттермен қарым-қатынас, верстка, API жасау.</li>
-                    <li>Веб-қосымшалар жасау, жаңа материалдарды оқу.</li>
-                    <li>Django REST API, ReactJS, Linux, Gunicorn, Redux.</li>
-                    <li>Дизайнермен жұмыс, дизайн идеяларын жасау.</li>
+                    <li>Клиенттермен байланыс, верстка, API жасау.</li>
+                    <li>Веб-қосымшалар әзірлеу, жаңа технологияларды үйрену.</li>
+                    <li>Django REST, ReactJS, Linux, Gunicorn, Redux.</li>
+                    <li>Дизайнермен бірлесе жұмыс істеу.</li>
                 </ul>
             </div>
         </div>
 
         <div class="section skills">
-            <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
-            <p>Актюбинский высший политехнический колледж · 2021</p>
-            <p>Информационные технологии, Веб-разработчик</p>
+            <h2><i class="fas fa-graduation-cap"></i> Білім</h2>
+            <p>Актюбинск Жоғары Политехникалық Колледжі · 2021</p>
+            <p>Ақпараттық технологиялар, Веб-әзірлеу</p>
         </div>
 
         <div class="section skills">
-            <h2><i class="fas fa-tools"></i> Навыки</h2>
+            <h2><i class="fas fa-tools"></i> Дағдылар</h2>
             <ul>
                 <li><i class="fas fa-code"></i> HTML</li>
                 <li><i class="fas fa-code"></i> CSS</li>
@@ -951,80 +865,225 @@
                 <li><i class="fab fa-docker"></i> Docker</li>
                 <li><i class="fab fa-laravel"></i> Laravel</li>
                 <li><i class="fab fa-linux"></i> Linux</li>
-                <li><i class="fas fa-user-friends"></i> Достық</li>
-                <li><i class="fas fa-comments"></i> Коммуникабельность</li>
-                <li><i class="fas fa-code-branch"></i> Работа с чужим кодом</li>
-                <li><i class="fas fa-server"></i> Настройка VPS/VDS серверов</li>
-                <li><i class="fas fa-database"></i> Базы данных</li>
-                <li><i class="fas fa-object-group"></i> ООП</li>
+                <li><i class="fas fa-code-branch"></i> Бөтен кодпен жұмыс</li>
+                <li><i class="fas fa-server"></i> VPS/VDS орнату</li>
+                <li><i class="fas fa-database"></i> Деректер базалары</li>
+                <li><i class="fas fa-object-group"></i> OOP</li>
                 <li><i class="fas fa-database"></i> PostgreSQL</li>
-                <li><i class="fas fa-git-alt"></i> Git</li>
-                <li><i class="fab fa-docker-compose"></i> Docker-compose</li>
-                <li><i class="fas fa-project-diagram"></i> Паттерны проектирования ООП</li>
+                <li><i class="fab fa-git-alt"></i> Git</li>
+                <li><i class="fab fa-docker-compose"></i> Docker Compose</li>
+                <li><i class="fas fa-project-diagram"></i> ООП дизайн үлгілері</li>
                 <li><i class="fas fa-database"></i> MySQL</li>
                 <li><i class="fas fa-code"></i> PSR-12</li>
                 <li><i class="fas fa-code"></i> PSR-4</li>
             </ul>
         </div>
 
-        <!-- Раздел Портфолио -->
+        <!-- Портфолио -->
         <div class="section portfolio">
             <h2><i class="fas fa-briefcase"></i> Портфолио</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="kostacademy.citorleu.kz_.png" alt="Костанай ІІМ академиясы сайты скриншоты">
-                    <h4><i class="fas fa-project-diagram"></i> Костанай ІІМ академиясы сайты</h4>
-                    <p>Қостанай ІІМ академиясы жобасы, Yii2 және PostgreSQL қолдана отырып жаңа модульдер мен әкімшілік панельді жақсарту жұмыстары.</p>
-                    <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
+                    <img src="kostacademy.citorleu.kz_.png" alt="Костанай ІІМ академиясы">
+                    <h4><i class="fas fa-project-diagram"></i> Костанай ІІМ академиясы</h4>
+                    <p>Костанай ІІМ академиясына арналған жоба: Yii2 және PostgreSQL арқылы жаңа модульдер мен админка жетілдіру.</p>
+                    <a href="https://qpa.edu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Жобаны қарау</a>
                 </div>
                 <div class="portfolio-item">
-                    <img src="academy.bilimal.kz_.png" alt="Қарағанды ІІМ академиясы сайты скриншоты">
-                    <h4><i class="fas fa-project-diagram"></i> Қарағанды ІІМ академиясы сайты</h4>
-                    <p>Қарағанды ІІМ академиясының жобасы, API және GraphQL арқылы академияның ақпараттық жүйесін қолдау жұмыстары.</p>
-                    <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
+                    <img src="academy.bilimal.kz_.png" alt="Қарағанды ІІМ академиясы">
+                    <h4><i class="fas fa-project-diagram"></i> Қарағанды ІІМ академиясы</h4>
+                    <p>Қарағанды ІІМ академиясына арналған жоба: API, GraphQL және академияның ақпараттық жүйесін қолдау.</p>
+                    <a href="https://academy.bilimal.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Жобаны қарау</a>
                 </div>
                 <div class="portfolio-item">
-                    <img src="slides.citorleu.kz_.png" alt="Презентация генерациясы жобасы скриншоты">
-                    <h4><i class="fas fa-project-diagram"></i> Презентация генерациясы</h4>
-                    <p>Презентацияларды AI және ChatGPT көмегімен генерациялау үшін веб-қосымша жасау жобасы. Stable Diffusion арқылы сурет генерациясын және Google арқылы сурет іздеуді интеграциялау.</p>
-                    <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Смотреть проект</a>
+                    <img src="slides.citorleu.kz_.png" alt="Slides.citorleu.kz">
+                    <h4><i class="fas fa-project-diagram"></i> Slides.citorleu.kz</h4>
+                    <p>ИИ (ChatGPT) көмегімен презентацияларды генерациялау веб-қосымшасы. Stable Diffusion және Google Image Search-пен біріктірілді.</p>
+                    <a href="https://slides.citorleu.kz/" target="_blank"><i class="fas fa-external-link-alt"></i> Жобаны қарау</a>
                 </div>
-                <!-- Добавьте больше проектов по аналогии -->
             </div>
         </div>
 
-
-
         <div class="section portfolio">
-            <h2><i class="fas fa-briefcase"></i> Жеке Жобаларым</h2>
+            <h2><i class="fas fa-briefcase"></i> Жеке жобалар</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Презентация редакторы (әзірлену үстінде)</h4>
-                    <p>React және Redux Toolkit негізінде презентацияларды жасау және өңдеу үшін веб-қосымша. Пайдаланушы интерфейсін икемді басқаруға ерекше назар аударылған.</p>
+                    <p>React, Redux Toolkit негізінде презентацияларды құру және өңдеу веб-қосымшасы. Пайдаланушы интерфейсінің икемділігіне басымдық берілген.</p>
                     <p><a href="https://slider-editor-murat.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/slider-editor" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
                     <h4><i class="fas fa-project-diagram"></i> Golang-та интернет дүкен (әзірлену үстінде)</h4>
-                    <p>Golang-та серверлік бөлігі бар электрондық коммерция платформасы. GORM және Docker сияқты заманауи құралдар қолданылған.</p>
+                    <p>GORM мен Docker пайдаланатын Go негізінде e-commerce платформасы.</p>
                     <p><a href="https://github.com/muratkosshi/shraphka_echo" target="_blank">GitHub</a></p>
                 </div>
                 <div class="portfolio-item">
-                    <h4><i class="fas fa-project-diagram"></i> Юристерге арналған сайт-визитка</h4>
-                    <p>Минималистік визитка сайты, заңгерлік қызметтерді көрсетуге бағытталған. Мазмұнды жүктеу және көрсету үшін заманауи технологиялар пайдаланылған.</p>
+                    <h4><i class="fas fa-project-diagram"></i> Заңгерлерге арналған сайт-визитка</h4>
+                    <p>Адаптивті дизайндағы минималистік визитка сайты. Жылдам жүктеу үшін заманауи технологиялар қолданылды.</p>
                     <p><a href="https://aquamarine-moonbeam-84b37a.netlify.app/" target="_blank">Сайт</a> | <a href="https://github.com/muratkosshi/urist_online" target="_blank">GitHub</a></p>
                 </div>
             </div>
         </div>
 
-
         <div class="section">
-            <h2><i class="fas fa-info-circle"></i> Дополнительная Информация</h2>
-            <p>Мой GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
+            <h2><i class="fas fa-info-circle"></i> Қосымша ақпарат</h2>
+            <p>GitHub: <a href="https://github.com/muratkosshi" target="_blank"><i class="fab fa-github"></i> github.com/muratkosshi</a></p>
         </div>
     </div>
+</div>
 
-    </div>
-    <script src="https://kit.fontawesome.com/859f408a69.js" crossorigin="anonymous"></script>
+<script>
+    // =======================
+    //  Переключение языков
+    // =======================
+    function showLanguage(lang) {
+        // Скрываем все языковые версии
+        var languages = document.getElementsByClassName('language');
+        for (var i = 0; i < languages.length; i++) {
+            languages[i].classList.remove('active');
+        }
+        // Отображаем выбранный язык
+        document.getElementById(lang).classList.add('active');
+
+        // Обновляем URL с параметром языка (чтобы при перезагрузке оставался)
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.pushState({}, '', url);
+    }
+
+    // ===============================
+    //  Парсинг даты и вычисление стажа
+    // ===============================
+    function parseDate(dateString) {
+        // Если значение "present", вернём текущую дату
+        if (dateString.toLowerCase() === "present") {
+            return new Date();
+        }
+        // dateString в формате "YYYY-MM" -> Создаём 1-е число этого месяца
+        const [year, month] = dateString.split('-');
+        return new Date(parseInt(year, 10), parseInt(month, 10) - 1, 1);
+    }
+
+    function calculateExperience(start, end) {
+        // Подсчёт полных лет и месяцев
+        let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 +
+            (end.getMonth() - start.getMonth());
+
+        if (totalMonths < 0) totalMonths = 0; // На случай некорректных дат
+
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
+        return { years, months };
+    }
+
+    // Формат отображения для каждого языка
+    function formatExperience(exp, lang) {
+        const y = exp.years;
+        const m = exp.months;
+
+        switch (lang) {
+            case 'en':
+                // "X years Y months"
+                if (y === 0 && m === 0) return "0 months";
+                let yearsEn = y === 1 ? "1 year" : `${y} years`;
+                let monthsEn = m === 1 ? "1 month" : `${m} months`;
+                if (y === 0) return `${monthsEn}`;
+                if (m === 0) return `${yearsEn}`;
+                return `${yearsEn} ${monthsEn}`;
+            case 'ru':
+                // "X лет Y месяцев" — упрощённо, без склонений
+                if (y === 0 && m === 0) return "0 мес.";
+                let yearsRu = `${y} лет`;
+                let monthsRu = `${m} мес.`;
+                if (y === 0) return monthsRu;
+                if (m === 0) return yearsRu;
+                return `${yearsRu} ${monthsRu}`;
+            case 'kz':
+                // "X жыл Y ай"
+                if (y === 0 && m === 0) return "0 ай";
+                let yearsKz = `${y} жыл`;
+                let monthsKz = `${m} ай`;
+                if (y === 0) return monthsKz;
+                if (m === 0) return yearsKz;
+                return `${yearsKz} ${monthsKz}`;
+            default:
+                return `${y} years ${m} months`;
+        }
+    }
+
+    // ============================
+    //  Инициализация при загрузке
+    // ============================
+    window.onload = function() {
+        // Определяем язык из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'ru'; // По умолчанию русский
+        showLanguage(lang);
+
+        // Для каждой языковой версии — суммируем общий стаж
+        let totalMonthsEn = 0, totalMonthsRu = 0, totalMonthsKz = 0;
+
+        // Обрабатываем все блоки .job (EN)
+        document.querySelectorAll('.job-period-en').forEach(function(elem) {
+            const startStr = elem.getAttribute('data-start');
+            const endStr = elem.getAttribute('data-end');
+
+            const startDate = parseDate(startStr);
+            const endDate = parseDate(endStr);
+
+            const exp = calculateExperience(startDate, endDate);
+            elem.innerText = formatExperience(exp, 'en');
+
+            // Для общего стажа (считаем в месяцах)
+            let months = (exp.years * 12) + exp.months;
+            totalMonthsEn += months;
+        });
+
+        // Обрабатываем все блоки .job (RU)
+        document.querySelectorAll('.job-period-ru').forEach(function(elem) {
+            const startStr = elem.getAttribute('data-start');
+            const endStr = elem.getAttribute('data-end');
+
+            const startDate = parseDate(startStr);
+            const endDate = parseDate(endStr);
+
+            const exp = calculateExperience(startDate, endDate);
+            elem.innerText = formatExperience(exp, 'ru');
+
+            let months = (exp.years * 12) + exp.months;
+            totalMonthsRu += months;
+        });
+
+        // Обрабатываем все блоки .job (KZ)
+        document.querySelectorAll('.job-period-kz').forEach(function(elem) {
+            const startStr = elem.getAttribute('data-start');
+            const endStr = elem.getAttribute('data-end');
+
+            const startDate = parseDate(startStr);
+            const endDate = parseDate(endStr);
+
+            const exp = calculateExperience(startDate, endDate);
+            elem.innerText = formatExperience(exp, 'kz');
+
+            let months = (exp.years * 12) + exp.months;
+            totalMonthsKz += months;
+        });
+
+        // Вычисляем суммарный стаж (в формате лет и месяцев) для каждого языка
+        function totalFormat(months, language) {
+            const years = Math.floor(months / 12);
+            const remMonths = months % 12;
+            return formatExperience({ years, months: remMonths }, language);
+        }
+
+        document.getElementById('total-experience-en').innerText = totalFormat(totalMonthsEn, 'en');
+        document.getElementById('total-experience-ru').innerText = totalFormat(totalMonthsRu, 'ru');
+        document.getElementById('total-experience-kz').innerText = totalFormat(totalMonthsKz, 'kz');
+    };
+</script>
+
+<script src="https://kit.fontawesome.com/859f408a69.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
