@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "title": "Professional Summary",
+    "content": "\n        <p>Male, 22 years old, born on April 8, 2002. Based in Aktobe, Kazakhstan. Open to relocation to Almaty or Astana and business trips.</p>\n        <p>Experienced Full Stack Developer with a focus on backend development, but also hands-on frontend skills. Interested in AI, microservices, and DevOps.</p>\n      "
+  },
+  "experience": {
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "title": "Programmer-Developer",
+        "company": "LLP \"Center for Innovative Technologies 'Өрлеу'\"",
+        "startDate": "2024-01",
+        "endDate": "present",
+        "responsibilities": [
+          "Developing new products from scratch and supporting existing ones.",
+          "Debugging and fixing production and test environment issues.",
+          "Working with Yii2 (PHP), PostgreSQL, Redis for API and business logic.",
+          "Implemented Redis caching for student transcript exports, significantly reducing DB load and speeding up data rendering.",
+          "Used Redis key dependencies tied to <code>student_id</code> to update only changed records.",
+          "Created and maintained DB migrations in Yii2/PostgreSQL.",
+          "Implemented a \"Resit Journal\" module for students retaking exams; collaborated with a ReactJS frontend developer.",
+          "Fixed bugs and made minor frontend updates on ReactJS when needed.",
+          "<strong>AI-Pitchmaker (slides.citorleu.kz):</strong>\n            <ul>\n              <li>Set up a FastAPI backend with Python, SQLAlchemy, Pydantic, Alembic.</li>\n              <li>Integrated JWT authorization for seamless user logins across multiple services.</li>\n              <li>Introduced Celery + Redis for asynchronous task processing (e.g., generating AI-based presentations) and offloading the main thread.</li>\n              <li>Built a ReactJS + Redux Toolkit frontend and an admin panel using SQLAdmin.</li>\n              <li>Occasionally performed DevOps tasks (cron jobs via crontab on the server, log monitoring, restarts) together with the main DevOps specialist.</li>\n              <li>In-code scheduling via AsyncIOScheduler for daily subscription updates.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Lead Developer",
+        "company": "TopNetworks HUB",
+        "startDate": "2023-09",
+        "endDate": "2024-05",
+        "responsibilities": [
+          "Maintained a WordPress website and a Telegram bot written in Node.js.",
+          "Handled layout, server administration, DevOps tasks, data parsing, and SEO optimization."
+        ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "eDauir",
+        "startDate": "2023-07",
+        "endDate": "2023-12",
+        "responsibilities": [
+          "Built features with Laravel (PHP 8) for <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>.",
+          "Deployed VPS (Ubuntu 22.04) with HestiaCP, worked on Figma layouts, HTML, SCSS, WebPack, JS landings.",
+          "Created APIs, worked with legacy code, used Docker Compose for containerization.",
+          "Introduced testing on Appium + Flutter + Python and documented API requests in Postman.",
+          "Key projects:\n            <ul>\n              <li><a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> – Flutter + pure PHP + MySQL (support & bug fixes).</li>\n              <li><a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> – Laravel + MySQL + Docker (added custom functionalities).</li>\n              <li><a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> – Layout with WebPack + SCSS.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Web Developer",
+        "company": "halykmart.kz",
+        "startDate": "2023-02",
+        "endDate": "2023-07",
+        "responsibilities": [
+          "Optimized and set up caching.",
+          "Supported a WordPress-based online store.",
+          "Performed data parsing in Python and handled data uploads."
+        ]
+      },
+      {
+        "title": "Technical Support Specialist",
+        "company": "AsiaBusinessAccounting",
+        "startDate": "2023-01",
+        "endDate": "2023-02",
+        "responsibilities": [
+          "Installed and configured Umag software.",
+          "Set up 1C-based cash registers.",
+          "Trained users and provided technical support."
+        ]
+      },
+      {
+        "title": "Individual Entrepreneur",
+        "company": "EOS",
+        "startDate": "2021-04",
+        "endDate": "2021-12",
+        "responsibilities": [
+          "Interacted with clients, performed layouts, and created APIs.",
+          "Developed web applications and explored new technologies.",
+          "Used Django REST, ReactJS, Linux, Gunicorn, Redux.",
+          "Collaborated with designers for UI/UX ideas."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "content": "\n        <p>Aktobe Higher Polytechnic College · 2021</p>\n        <p>Information Technology, Web Developer</p>\n      "
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      { "name": "HTML", "icon": "fas fa-code" },
+      { "name": "CSS", "icon": "fas fa-code" },
+      { "name": "Nginx", "icon": "fab fa-nginx" },
+      { "name": "Python", "icon": "fab fa-python" },
+      { "name": "PHP", "icon": "fab fa-php" },
+      { "name": "Docker", "icon": "fab fa-docker" },
+      { "name": "Laravel", "icon": "fab fa-laravel" },
+      { "name": "Linux", "icon": "fab fa-linux" },
+      { "name": "Working with legacy code", "icon": "fas fa-code-branch" },
+      { "name": "VPS/VDS Setup", "icon": "fas fa-server" },
+      { "name": "Databases", "icon": "fas fa-database" },
+      { "name": "OOP", "icon": "fas fa-object-group" },
+      { "name": "PostgreSQL", "icon": "fas fa-database" },
+      { "name": "Git", "icon": "fab fa-git-alt" },
+      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
+      { "name": "OOP Design Patterns", "icon": "fas fa-project-diagram" },
+      { "name": "MySQL", "icon": "fas fa-database" },
+      { "name": "PSR-12", "icon": "fas fa-code" },
+      { "name": "PSR-4", "icon": "fas fa-code" }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "projects": [
+      {
+        "title": "Kostanay MIA Academy Site",
+        "description": "A project for the Kostanay MIA Academy, including new modules and enhancements to the admin panel using Yii2 and PostgreSQL.",
+        "image": "/kostacademy.citorleu.kz_.png",
+        "link": "https://qpa.edu.kz/",
+        "linkText": "View Project"
+      },
+      {
+        "title": "Karaganda MIA Academy Site",
+        "description": "Project for the Karaganda MIA Academy, including API and GraphQL support for the academy's information system.",
+        "image": "/academy.bilimal.kz_.png",
+        "link": "https://academy.bilimal.kz/",
+        "linkText": "View Project"
+      },
+      {
+        "title": "Slides.citorleu.kz",
+        "description": "Developed from scratch for generating AI-based presentations using ChatGPT, integrated with Stable Diffusion and Google Image Search.",
+        "image": "/slides.citorleu.kz_.png",
+        "link": "https://slides.citorleu.kz/",
+        "linkText": "View Project"
+      }
+    ]
+  },
+  "personalProjects": {
+    "title": "Personal Projects",
+    "projects": [
+      {
+        "title": "Presentation Editor (In Development)",
+        "description": "A web application for creating and editing presentations, built with React and Redux Toolkit. Focuses on flexibility of the user interface.",
+        "links": [
+          { "text": "Website", "url": "https://slider-editor-murat.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
+        ]
+      },
+      {
+        "title": "E-commerce on Golang (In Development)",
+        "description": "A platform for e-commerce with a Go-based backend, using GORM for database management and Docker for environment setup.",
+        "links": [
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
+        ]
+      },
+      {
+        "title": "Business Card Website for Lawyers",
+        "description": "A minimalist business card site with a responsive design aimed at presenting legal services. Uses modern technologies for optimal loading and display.",
+        "links": [
+          { "text": "Website", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
+        ]
+      }
+    ]
+  },
+  "additionalInfo": {
+    "title": "Additional Information",
+    "content": "\n        <p>GitHub: <a href=\"https://github.com/muratkosshi\" target=\"_blank\"><i class=\"fab fa-github\"></i> github.com/muratkosshi</a></p>\n      "
+  }
+}

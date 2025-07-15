@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "title": "Кәсіби Қысқаша Мазмұны",
+    "content": "\n        <p>Ер адам, 22 жаста, 2002 жылдың 8 сәуірінде туған. Ақтөбе қаласында тұрады, Қазақстан. Алматы немесе Астана қаласына көшуге, іссапарларға дайын.</p>\n        <p>Full Stack Developer (негізгі бағытым – backend), қажет болғанда frontend-те де жұмыс істеймін. ЖИ, микросервистік архитектура және DevOps салаларына қызығушылық бар.</p>\n      "
+  },
+  "experience": {
+    "title": "Жұмыс Тәжірибесі",
+    "jobs": [
+      {
+        "title": "Бағдарламашы-әзірлеуші",
+        "company": "\"Өрлеу\" Инновациялық Технологиялар Орталығы ЖШС",
+        "startDate": "2024-01",
+        "endDate": "present",
+        "responsibilities": [
+          "Жаңа өнімдерді нөлден бастап әзірлеу және қолданыстағы шешімдерді қолдау.",
+          "Өндірістік (продакшн) және тесттік ортадағы қателерді іздеу және түзету.",
+          "Yii2 (PHP), PostgreSQL, Redis арқылы API мен бизнес-логика әзірлеу.",
+          "Студенттің бағаларын экспорттау барысында DB жүктемесін төмендету үшін Redis кэштеуін енгіздім.",
+          "<code>student_id</code> бойынша тәуелділікті қолданып, тек өзгерген жазбаларды жаңарту тәсілін қолдандым.",
+          "Yii2/PostgreSQL-те миграцияларды жасап, қолдап отырдым.",
+          "Емтиханды қайта тапсыратын студенттерді бақылау үшін «Журнал переводников» модулін жасадым; ReactJS-пен жұмыс істейтін frontend-дизайнермен бірлесе жұмыс істедім.",
+          "ReactJS-тағы кейбір қателерді түзетіп, қажет болған жағдайда фронтендті жетілдірдім.",
+          "<strong>AI-Pitchmaker (slides.citorleu.kz):</strong>\n            <ul>\n              <li>FastAPI (Python), SQLAlchemy, Pydantic, Alembic негізінде backend орнаттым.</li>\n              <li>Бірнеше сервис арасында бірыңғай авторизация үшін JWT-ті біріктірдім.</li>\n              <li>Негізгі ағынды босату үшін Celery + Redis арқылы асинхронды тапсырмалар жүйесін қостым (ИИ-презентацияларды генерациялау).</li>\n              <li>ReactJS + Redux Toolkit-те фронтендті әзірледім, SQLAdmin админ-панелін орнаттым.</li>\n              <li>Кейде DevOps-әзірлеушімен бірлесе серверге қатысты жұмыстарды (cron баптау, логтарды тексеру, қолданбаны қайта іске қосу) атқарамын.</li>\n              <li>AsyncIOScheduler арқылы күнделікті жазылуларды жаңартуды жоспарлауды орнаттым.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Жетекші әзірлеуші",
+        "company": "TopNetworks HUB",
+        "startDate": "2023-09",
+        "endDate": "2024-05",
+        "responsibilities": [
+          "WordPress-тағы сайтты және Nodejs-тағы Telegram-ботты қолдау.",
+          "Верстка, сервер әкімшілігі, DevOps, парсинг, SEO оңтайландыру."
+        ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "eDauir",
+        "startDate": "2023-07",
+        "endDate": "2023-12",
+        "responsibilities": [
+          "Laravel (PHP 8) арқылы <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>-ке функционал қостым.",
+          "VPS (Ubuntu 22.04) орнаттым (HestiaCP), Figma-дағы макеттерді өңдедім, HTML, SCSS, WebPack, JS арқылы лендинг жасадым.",
+          "API жасадым, бөтен кодпен жұмыс істедім, Docker Compose пайдаландым.",
+          "Appium + Flutter + Python арқылы тестілеуді енгіздім, Postman-да API сұрауларын құжаттадым.",
+          "Негізгі жобалар:\n            <ul>\n              <li><a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> – Flutter + таза PHP + MySQL (қолдау және қателерді түзету).</li>\n              <li><a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> – Laravel + MySQL + Docker (тапсырыс беруші талабына сай функционал қосу).</li>\n              <li><a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> – WebPack + SCSS көмегімен верстка.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Web-әзірлеуші",
+        "company": "halykmart.kz",
+        "startDate": "2023-02",
+        "endDate": "2023-07",
+        "responsibilities": [
+          "Оңтайландыру және кэштеуді баптау.",
+          "WordPress-та интернет-дүкенді қолдау және дамыту.",
+          "Python арқылы деректерді парсинг жасау, сайтқа жүктеу."
+        ]
+      },
+      {
+        "title": "Техникалық қолдау маманы",
+        "company": "АзияБизнесУчет",
+        "startDate": "2023-01",
+        "endDate": "2023-02",
+        "responsibilities": [
+          "Umag бағдарламалық қамтылымын орнату және баптау.",
+          "1С кассаларын баптау.",
+          "Пайдаланушыларды оқыту, техникалық қолдау көрсету."
+        ]
+      },
+      {
+        "title": "Жеке кәсіпкер",
+        "company": "EOS",
+        "startDate": "2021-04",
+        "endDate": "2021-12",
+        "responsibilities": [
+          "Клиенттермен байланыс, верстка, API жасау.",
+          "Веб-қосымшалар әзірлеу, жаңа технологияларды үйрену.",
+          "Django REST, ReactJS, Linux, Gunicorn, Redux.",
+          "Дизайнермен бірлесе жұмыс істеу."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Білім",
+    "content": "\n        <p>Актюбинск Жоғары Политехникалық Колледжі · 2021</p>\n        <p>Ақпараттық технологиялар, Веб-әзірлеу</p>\n      "
+  },
+  "skills": {
+    "title": "Дағдылар",
+    "items": [
+      { "name": "HTML", "icon": "fas fa-code" },
+      { "name": "CSS", "icon": "fas fa-code" },
+      { "name": "Nginx", "icon": "fab fa-nginx" },
+      { "name": "Python", "icon": "fab fa-python" },
+      { "name": "PHP", "icon": "fab fa-php" },
+      { "name": "Docker", "icon": "fab fa-docker" },
+      { "name": "Laravel", "icon": "fab fa-laravel" },
+      { "name": "Linux", "icon": "fab fa-linux" },
+      { "name": "Бөтен кодпен жұмыс", "icon": "fas fa-code-branch" },
+      { "name": "VPS/VDS орнату", "icon": "fas fa-server" },
+      { "name": "Деректер базалары", "icon": "fas fa-database" },
+      { "name": "OOP", "icon": "fas fa-object-group" },
+      { "name": "PostgreSQL", "icon": "fas fa-database" },
+      { "name": "Git", "icon": "fab fa-git-alt" },
+      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
+      { "name": "ООП дизайн үлгілері", "icon": "fas fa-project-diagram" },
+      { "name": "MySQL", "icon": "fas fa-database" },
+      { "name": "PSR-12", "icon": "fas fa-code" },
+      { "name": "PSR-4", "icon": "fas fa-code" }
+    ]
+  },
+  "portfolio": {
+    "title": "Портфолио",
+    "projects": [
+      {
+        "title": "Костанай ІІМ академиясы",
+        "description": "Костанай ІІМ академиясына арналған жоба: Yii2 және PostgreSQL арқылы жаңа модульдер мен админка жетілдіру.",
+        "image": "/kostacademy.citorleu.kz_.png",
+        "link": "https://qpa.edu.kz/",
+        "linkText": "Жобаны қарау"
+      },
+      {
+        "title": "Қарағанды ІІМ академиясы",
+        "description": "Қарағанды ІІМ академиясына арналған жоба: API, GraphQL және академияның ақпараттық жүйесін қолдау.",
+        "image": "/academy.bilimal.kz_.png",
+        "link": "https://academy.bilimal.kz/",
+        "linkText": "Жобаны қарау"
+      },
+      {
+        "title": "Slides.citorleu.kz",
+        "description": "ИИ (ChatGPT) көмегімен презентацияларды генерациялау веб-қосымшасы. Stable Diffusion және Google Image Search-пен біріктірілді.",
+        "image": "/slides.citorleu.kz_.png",
+        "link": "https://slides.citorleu.kz/",
+        "linkText": "Жобаны қарау"
+      }
+    ]
+  },
+  "personalProjects": {
+    "title": "Жеке жобалар",
+    "projects": [
+      {
+        "title": "Презентация редакторы (әзірлену үстінде)",
+        "description": "React, Redux Toolkit негізінде презентацияларды құру және өңдеу веб-қосымшасы. Пайдаланушы интерфейсінің икемділігіне басымдық берілген.",
+        "links": [
+          { "text": "Сайт", "url": "https://slider-editor-murat.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
+        ]
+      },
+      {
+        "title": "Golang-та интернет дүкен (әзірлену үстінде)",
+        "description": "GORM мен Docker пайдаланатын Go негізінде e-commerce платформасы.",
+        "links": [
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
+        ]
+      },
+      {
+        "title": "Заңгерлерге арналған сайт-визитка",
+        "description": "Адаптивті дизайндағы минималистік визитка сайты. Жылдам жүктеу үшін заманауи технологиялар қолданылды.",
+        "links": [
+          { "text": "Сайт", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
+        ]
+      }
+    ]
+  },
+  "additionalInfo": {
+    "title": "Қосымша ақпарат",
+    "content": "\n        <p>GitHub: <a href=\"https://github.com/muratkosshi\" target=\"_blank\"><i class=\"fab fa-github\"></i> github.com/muratkosshi</a></p>\n      "
+  }
+}

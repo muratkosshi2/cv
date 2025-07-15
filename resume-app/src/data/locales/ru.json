@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "title": "Профессиональное Резюме",
+    "content": "\n        <p>Мужчина, 22 года, дата рождения: 8 апреля 2002 года. Проживает в Актобе, Казахстан. Готов к переезду в Алматы или Астану, а также к командировкам.</p>\n        <p>Опытный Full Stack-разработчик с упором на бэкенд, при необходимости выполняю задачи и на фронтенде. Интересуюсь разработкой ИИ, микросервисами и DevOps.</p>\n      "
+  },
+  "experience": {
+    "title": "Опыт Работы",
+    "jobs": [
+      {
+        "title": "Программист-разработчик",
+        "company": "ТОО «Центр Инновационных Технологий «Өрлеу»",
+        "startDate": "2024-01",
+        "endDate": "present",
+        "responsibilities": [
+          "Разработка новых продуктов с нуля и поддержка существующих решений.",
+          "Поиск и устранение ошибок на продакшене и тестовых стендах.",
+          "Работа с Yii2 (PHP), PostgreSQL, Redis для API и бизнес-логики.",
+          "Внедрил кэширование в Redis для выгрузки транскриптов оценок, значительно снизив нагрузку на БД и ускорив отображение данных.",
+          "Применил зависимости кэша по <code>student_id</code>, чтобы обновлять только изменившиеся записи.",
+          "Создавал и поддерживал миграции в Yii2/PostgreSQL.",
+          "Реализовал модуль «Журнал переводников» для отслеживания пересдач экзаменов; взаимодействовал с фронтенд-разработчиком на ReactJS.",
+          "Исправлял баги и при необходимости дорабатывал фронтенд-функционал на ReactJS.",
+          "<strong>AI-Pitchmaker (slides.citorleu.kz):</strong>\n            <ul>\n              <li>Настроил backend на FastAPI (Python), использовал SQLAlchemy, Pydantic, Alembic.</li>\n              <li>Интегрировал JWT-авторизацию для единого входа пользователей между сервисами.</li>\n              <li>Добавил Celery + Redis для асинхронной обработки задач (генерация презентаций на ИИ) и разгрузки основного потока.</li>\n              <li>Реализовал frontend на ReactJS + Redux Toolkit, админ-панель на SQLAdmin.</li>\n              <li>Иногда выполнял DevOps-задачи (настройка cron-задач через crontab, проверка логов, рестарт приложения) в сотрудничестве с DevOps-специалистом.</li>\n              <li>Организовал планировщик через AsyncIOScheduler для ежедневного обновления подписок.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Ведущий разработчик",
+        "company": "TopNetworks HUB",
+        "startDate": "2023-09",
+        "endDate": "2024-05",
+        "responsibilities": [
+          "Поддержка сайта на WordPress и Telegram-бота на Node.js.",
+          "Занимался вёрсткой, администрированием сервера, DevOps, парсингом, SEO-оптимизацией."
+        ]
+      },
+      {
+        "title": "Full Stack-разработчик",
+        "company": "eDauir",
+        "startDate": "2023-07",
+        "endDate": "2023-12",
+        "responsibilities": [
+          "Работал с Laravel (PHP 8) для <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>.",
+          "Разворачивал VPS (Ubuntu 22.04) с HestiaCP, редактировал макеты в Figma, вёрстал на HTML, SCSS, WebPack, JS.",
+          "Создавал API, работал с чужим кодом, использовал Docker Compose для контейнеризации.",
+          "Внедрил тестирование на Appium + Flutter + Python, задокументировал API в Postman.",
+          "Ключевые проекты:\n            <ul>\n              <li><a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> – Flutter + чистый PHP + MySQL (поддержка и багфиксы).</li>\n              <li><a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> – Laravel + MySQL + Docker (добавление функционала по требованию заказчика).</li>\n              <li><a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> – верстка на WebPack + SCSS.</li>\n            </ul>"
+        ]
+      },
+      {
+        "title": "Web-разработчик",
+        "company": "halykmart.kz",
+        "startDate": "2023-02",
+        "endDate": "2023-07",
+        "responsibilities": [
+          "Оптимизация и настройка кэширования.",
+          "Поддержка и разработка интернет-магазина на WordPress.",
+          "Парсинг данных на Python, загрузка на сайт."
+        ]
+      },
+      {
+        "title": "Специалист технической поддержки",
+        "company": "АзияБизнесУчет",
+        "startDate": "2023-01",
+        "endDate": "2023-02",
+        "responsibilities": [
+          "Установка и настройка ПО Umag.",
+          "Настройка касс 1С.",
+          "Обучение пользователей, техническая поддержка."
+        ]
+      },
+      {
+        "title": "Индивидуальный предприниматель",
+        "company": "EOS",
+        "startDate": "2021-04",
+        "endDate": "2021-12",
+        "responsibilities": [
+          "Работа с клиентами, вёрстка, создание API.",
+          "Разработка веб-приложений, изучение новых технологий.",
+          "Django REST, ReactJS, Linux, Gunicorn, Redux.",
+          "Совместная работа с дизайнером."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Образование",
+    "content": "\n        <p>Актюбинский высший политехнический колледж · 2021</p>\n        <p>Информационные технологии, Веб-разработка</p>\n      "
+  },
+  "skills": {
+    "title": "Навыки",
+    "items": [
+      { "name": "HTML", "icon": "fas fa-code" },
+      { "name": "CSS", "icon": "fas fa-code" },
+      { "name": "Nginx", "icon": "fab fa-nginx" },
+      { "name": "Python", "icon": "fab fa-python" },
+      { "name": "PHP", "icon": "fab fa-php" },
+      { "name": "Docker", "icon": "fab fa-docker" },
+      { "name": "Laravel", "icon": "fab fa-laravel" },
+      { "name": "Linux", "icon": "fab fa-linux" },
+      { "name": "Работа с чужим кодом", "icon": "fas fa-code-branch" },
+      { "name": "Настройка VPS/VDS", "icon": "fas fa-server" },
+      { "name": "Базы данных", "icon": "fas fa-database" },
+      { "name": "ООП", "icon": "fas fa-object-group" },
+      { "name": "PostgreSQL", "icon": "fas fa-database" },
+      { "name": "Git", "icon": "fab fa-git-alt" },
+      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
+      { "name": "Паттерны проектирования ООП", "icon": "fas fa-project-diagram" },
+      { "name": "MySQL", "icon": "fas fa-database" },
+      { "name": "PSR-12", "icon": "fas fa-code" },
+      { "name": "PSR-4", "icon": "fas fa-code" }
+    ]
+  },
+  "portfolio": {
+    "title": "Портфолио",
+    "projects": [
+      {
+        "title": "Костанайская академия МВД",
+        "description": "Проект для Костанайской академии МВД: новые модули и доработка админки на Yii2 и PostgreSQL.",
+        "image": "/kostacademy.citorleu.kz_.png",
+        "link": "https://qpa.edu.kz/",
+        "linkText": "Смотреть проект"
+      },
+      {
+        "title": "Астанинская академия МВД",
+        "description": "Проект для Костанайской академии МВД: новые модули и доработка админки на Yii2 и PostgreSQL.",
+        "image": "/astana.png",
+        "link": "https://aumvd.citorleu.kz/",
+        "linkText": "Смотреть проект"
+      },
+      {
+        "title": "Карагандинская академия МВД",
+        "description": "Проект для Карагандинской академии МВД с поддержкой API, GraphQL и информационной системы академии.",
+        "image": "/academy.bilimal.kz_.png",
+        "link": "https://academy.bilimal.kz/",
+        "linkText": "Смотреть проект"
+      },
+      {
+        "title": "Slides.citorleu.kz",
+        "description": "Веб-приложение для генерации презентаций с использованием ИИ (ChatGPT), интегрировано со Stable Diffusion и Google Image Search.",
+        "image": "/slides.citorleu.kz_.png",
+        "link": "https://slides.citorleu.kz/",
+        "linkText": "Смотреть проект"
+      }
+    ]
+  },
+  "personalProjects": {
+    "title": "Личные проекты",
+    "projects": [
+      {
+        "title": "Редактор презентаций (в разработке)",
+        "description": "Веб-приложение для создания и редактирования презентаций (React, Redux Toolkit). Упор на гибкость UI.",
+        "links": [
+          { "text": "Сайт", "url": "https://slider-editor-murat.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
+        ]
+      },
+      {
+        "title": "Интернет-магазин на Golang (в разработке)",
+        "description": "Платформа для e-commerce на Go, использующая GORM и Docker для развёртывания.",
+        "links": [
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
+        ]
+      },
+      {
+        "title": "Сайт-визитка для юристов",
+        "description": "Минималистичный сайт с адаптивным дизайном для представления юридических услуг. Используются современные технологии для быстрой загрузки.",
+        "links": [
+          { "text": "Сайт", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
+          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
+        ]
+      }
+    ]
+  },
+  "additionalInfo": {
+    "title": "Дополнительная Информация",
+    "content": "\n        <p>Мой GitHub: <a href=\"https://github.com/muratkosshi\" target=\"_blank\"><i class=\"fab fa-github\"></i> github.com/muratkosshi</a></p>\n      "
+  }
+}
