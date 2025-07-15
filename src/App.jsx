@@ -6,7 +6,12 @@ import Section from './components/Section';
 import WorkExperience from './components/WorkExperience';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
-import { resumeData } from './data/resumeData';
+import AdminPanel from './components/AdminPanel';
+import EditableSection from './components/EditableSection';
+import EditableWorkExperience from './components/EditableWorkExperience';
+import EditableSkills from './components/EditableSkills';
+import EditablePortfolio from './components/EditablePortfolio';
+import useResumeData from './hooks/useResumeData';
 import { theme } from './theme';
 
 const AppContainer = styled.div`
@@ -60,6 +65,25 @@ const Footer = styled.footer`
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState('ru');
+  const [isEditMode, setIsEditMode] = useState(false);
+  
+  const {
+    data,
+    saveData,
+    resetData,
+    exportData,
+    importData,
+    updateSectionField,
+    addWorkExperience,
+    updateWorkExperience,
+    removeWorkExperience,
+    addSkill,
+    updateSkill,
+    removeSkill,
+    addProject,
+    updateProject,
+    removeProject
+  } = useResumeData(currentLanguage);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -74,11 +98,34 @@ function App() {
     window.history.pushState({}, '', url);
   };
 
-  const data = resumeData[currentLanguage];
+  const handleToggleEditMode = (editMode) => {
+    setIsEditMode(editMode);
+  };
+
+  const handleSummaryEdit = (content) => {
+    updateSectionField(currentLanguage, 'summary', 'content', content);
+  };
+
+  const handleEducationEdit = (content) => {
+    updateSectionField(currentLanguage, 'education', 'content', content);
+  };
+
+  const handleAdditionalInfoEdit = (content) => {
+    updateSectionField(currentLanguage, 'additionalInfo', 'content', content);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <AppContainer>
+        <AdminPanel
+          isEditMode={isEditMode}
+          onToggleEditMode={handleToggleEditMode}
+          onSaveChanges={saveData}
+          onResetData={resetData}
+          onExportData={exportData}
+          onImportData={importData}
+        />
+        
         <MainCard>
           <ContentWrapper>
             <Header />
@@ -88,35 +135,94 @@ function App() {
             />
             
             <SectionsContainer>
-              <Section title={data.summary.title} icon="fas fa-user">
-                <div dangerouslySetInnerHTML={{ __html: data.summary.content }} />
-              </Section>
+              <EditableSection
+                isEditMode={isEditMode}
+                onEdit={handleSummaryEdit}
+                title="Резюме"
+                type="html"
+              >
+                <Section title={data.summary.title} icon="fas fa-user">
+                  <div dangerouslySetInnerHTML={{ __html: data.summary.content }} />
+                </Section>
+              </EditableSection>
 
-              <WorkExperience 
-                title={data.experience.title} 
+              <EditableWorkExperience
+                isEditMode={isEditMode}
                 jobs={data.experience.jobs}
+                onAddJob={addWorkExperience}
+                onUpdateJob={updateWorkExperience}
+                onDeleteJob={removeWorkExperience}
                 language={currentLanguage}
-              />
+              >
+                <WorkExperience 
+                  title={data.experience.title} 
+                  jobs={data.experience.jobs}
+                  language={currentLanguage}
+                />
+              </EditableWorkExperience>
 
-              <Section title={data.education.title} icon="fas fa-graduation-cap">
-                <div dangerouslySetInnerHTML={{ __html: data.education.content }} />
-              </Section>
+              <EditableSection
+                isEditMode={isEditMode}
+                onEdit={handleEducationEdit}
+                title="Образование"
+                type="html"
+              >
+                <Section title={data.education.title} icon="fas fa-graduation-cap">
+                  <div dangerouslySetInnerHTML={{ __html: data.education.content }} />
+                </Section>
+              </EditableSection>
 
-              <Skills title={data.skills.title} skills={data.skills.items} />
+              <EditableSkills
+                isEditMode={isEditMode}
+                skills={data.skills.items}
+                onAddSkill={addSkill}
+                onUpdateSkill={updateSkill}
+                onDeleteSkill={removeSkill}
+                language={currentLanguage}
+              >
+                <Skills title={data.skills.title} skills={data.skills.items} />
+              </EditableSkills>
 
-              <Portfolio 
-                title={data.portfolio.title} 
+              <EditablePortfolio
+                isEditMode={isEditMode}
                 projects={data.portfolio.projects}
-              />
+                onAddProject={addProject}
+                onUpdateProject={updateProject}
+                onDeleteProject={removeProject}
+                language={currentLanguage}
+                section="portfolio"
+              >
+                <Portfolio 
+                  title={data.portfolio.title} 
+                  projects={data.portfolio.projects}
+                />
+              </EditablePortfolio>
 
-              <Portfolio 
-                title={data.personalProjects.title} 
+              <EditablePortfolio
+                isEditMode={isEditMode}
                 projects={data.personalProjects.projects}
-              />
+                onAddProject={addProject}
+                onUpdateProject={updateProject}
+                onDeleteProject={removeProject}
+                language={currentLanguage}
+                section="personalProjects"
+              >
+                <Portfolio 
+                  title={data.personalProjects.title} 
+                  projects={data.personalProjects.projects}
+                />
+              </EditablePortfolio>
 
-              <Section title={data.additionalInfo.title} icon="fas fa-info-circle">
-                <div dangerouslySetInnerHTML={{ __html: data.additionalInfo.content }} />
-              </Section>
+              <EditableSection
+                isEditMode={isEditMode}
+                onEdit={handleAdditionalInfoEdit}
+                title="Дополнительная информация"
+                type="html"
+              >
+                <Section title={data.additionalInfo.title} icon="fas fa-info-circle">
+                  <div dangerouslySetInnerHTML={{ __html: data.additionalInfo.content }} />
+                </Section>
+              </EditableSection>
             </SectionsContainer>
           </ContentWrapper>
         </MainCard>
