@@ -24,6 +24,20 @@
         ]
       },
       {
+        "title": "Backend Developer",
+        "company": "FIN GROUP",
+        "startDate": "2025-05-01",
+        "endDate": "present",
+        "responsibilities": [
+          "Администрирование MySQL баз данных",
+          "Техническая поддержка с 9 до 18:00",
+          "Рефакторинг кода",
+          "Соблюдение паттернов и правил написания кода: MVC, DRY, SOLID",
+          "Диагностика багов и их устранение",
+          "Налаживание работы и комуникация с менджерами таксопарков в случае сбоев и ошибок"
+        ]
+      },
+      {
         "title": "Ведущий разработчик",
         "company": "TopNetworks HUB",
         "startDate": "2023-09",
@@ -80,6 +94,7 @@
           "Совместная работа с дизайнером."
         ]
       }
+
     ]
   },
   "education": {
@@ -89,25 +104,82 @@
   "skills": {
     "title": "Навыки",
     "items": [
-      { "name": "HTML", "icon": "fas fa-code" },
-      { "name": "CSS", "icon": "fas fa-code" },
-      { "name": "Nginx", "icon": "fab fa-nginx" },
-      { "name": "Python", "icon": "fab fa-python" },
-      { "name": "PHP", "icon": "fab fa-php" },
-      { "name": "Docker", "icon": "fab fa-docker" },
-      { "name": "Laravel", "icon": "fab fa-laravel" },
-      { "name": "Linux", "icon": "fab fa-linux" },
-      { "name": "Работа с чужим кодом", "icon": "fas fa-code-branch" },
-      { "name": "Настройка VPS/VDS", "icon": "fas fa-server" },
-      { "name": "Базы данных", "icon": "fas fa-database" },
-      { "name": "ООП", "icon": "fas fa-object-group" },
-      { "name": "PostgreSQL", "icon": "fas fa-database" },
-      { "name": "Git", "icon": "fab fa-git-alt" },
-      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
-      { "name": "Паттерны проектирования ООП", "icon": "fas fa-project-diagram" },
-      { "name": "MySQL", "icon": "fas fa-database" },
-      { "name": "PSR-12", "icon": "fas fa-code" },
-      { "name": "PSR-4", "icon": "fas fa-code" }
+      {
+        "name": "HTML",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "CSS",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "Nginx",
+        "icon": "fab fa-nginx"
+      },
+      {
+        "name": "Python",
+        "icon": "fab fa-python"
+      },
+      {
+        "name": "PHP",
+        "icon": "fab fa-php"
+      },
+      {
+        "name": "Docker",
+        "icon": "fab fa-docker"
+      },
+      {
+        "name": "Laravel",
+        "icon": "fab fa-laravel"
+      },
+      {
+        "name": "Linux",
+        "icon": "fab fa-linux"
+      },
+      {
+        "name": "Работа с чужим кодом",
+        "icon": "fas fa-code-branch"
+      },
+      {
+        "name": "Настройка VPS/VDS",
+        "icon": "fas fa-server"
+      },
+      {
+        "name": "Базы данных",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "ООП",
+        "icon": "fas fa-object-group"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "Git",
+        "icon": "fab fa-git-alt"
+      },
+      {
+        "name": "Docker Compose",
+        "icon": "fab fa-docker-compose"
+      },
+      {
+        "name": "Паттерны проектирования ООП",
+        "icon": "fas fa-project-diagram"
+      },
+      {
+        "name": "MySQL",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "PSR-12",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "PSR-4",
+        "icon": "fas fa-code"
+      }
     ]
   },
   "portfolio": {
@@ -150,23 +222,38 @@
         "title": "Редактор презентаций (в разработке)",
         "description": "Веб-приложение для создания и редактирования презентаций (React, Redux Toolkit). Упор на гибкость UI.",
         "links": [
-          { "text": "Сайт", "url": "https://slider-editor-murat.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
+          {
+            "text": "Сайт",
+            "url": "https://slider-editor-murat.netlify.app/"
+          },
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/slider-editor"
+          }
         ]
       },
       {
         "title": "Интернет-магазин на Golang (в разработке)",
         "description": "Платформа для e-commerce на Go, использующая GORM и Docker для развёртывания.",
         "links": [
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/shraphka_echo"
+          }
         ]
       },
       {
         "title": "Сайт-визитка для юристов",
         "description": "Минималистичный сайт с адаптивным дизайном для представления юридических услуг. Используются современные технологии для быстрой загрузки.",
         "links": [
-          { "text": "Сайт", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
+          {
+            "text": "Сайт",
+            "url": "https://aquamarine-moonbeam-84b37a.netlify.app/"
+          },
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/urist_online"
+          }
         ]
       }
     ]

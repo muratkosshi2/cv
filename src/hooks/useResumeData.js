@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { resumeData as originalData } from '../data/resumeData';
+import { autoSaveToFiles } from '../utils/fileWriter';
 
 const useResumeData = (language) => {
   const [data, setData] = useState(originalData);
@@ -22,10 +23,18 @@ const useResumeData = (language) => {
     setIsDirty(true);
   };
 
-  const saveData = () => {
+  const saveData = async () => {
     localStorage.setItem('resumeData', JSON.stringify(data));
     setIsDirty(false);
-    alert('Данные сохранены');
+    
+    // Автоматически сохраняем файлы
+    const success = await autoSaveToFiles(data);
+    
+    if (success) {
+      alert('Данные сохранены в localStorage и экспортированы в файлы');
+    } else {
+      alert('Данные сохранены в localStorage, но произошла ошибка при экспорте файлов');
+    }
   };
 
   const resetData = () => {

@@ -24,6 +24,20 @@
         ]
       },
       {
+        "title": "Backend Developer",
+        "company": "FIN GROUP",
+        "startDate": "2025-05-01",
+        "endDate": "present",
+        "responsibilities": [
+          "Administration of MySQL databases",
+          "Technical support from 9:00 to 18:00",
+          "Code refactoring",
+          "Following coding patterns and principles: MVC, DRY, SOLID",
+          "Bug diagnostics and fixing",
+          "Establishing workflows and communicating with taxi fleet managers in case of system failures or errors"
+        ]
+      },
+      {
         "title": "Lead Developer",
         "company": "TopNetworks HUB",
         "startDate": "2023-09",
@@ -80,6 +94,8 @@
           "Collaborated with designers for UI/UX ideas."
         ]
       }
+
+
     ]
   },
   "education": {
@@ -89,25 +105,82 @@
   "skills": {
     "title": "Skills",
     "items": [
-      { "name": "HTML", "icon": "fas fa-code" },
-      { "name": "CSS", "icon": "fas fa-code" },
-      { "name": "Nginx", "icon": "fab fa-nginx" },
-      { "name": "Python", "icon": "fab fa-python" },
-      { "name": "PHP", "icon": "fab fa-php" },
-      { "name": "Docker", "icon": "fab fa-docker" },
-      { "name": "Laravel", "icon": "fab fa-laravel" },
-      { "name": "Linux", "icon": "fab fa-linux" },
-      { "name": "Working with legacy code", "icon": "fas fa-code-branch" },
-      { "name": "VPS/VDS Setup", "icon": "fas fa-server" },
-      { "name": "Databases", "icon": "fas fa-database" },
-      { "name": "OOP", "icon": "fas fa-object-group" },
-      { "name": "PostgreSQL", "icon": "fas fa-database" },
-      { "name": "Git", "icon": "fab fa-git-alt" },
-      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
-      { "name": "OOP Design Patterns", "icon": "fas fa-project-diagram" },
-      { "name": "MySQL", "icon": "fas fa-database" },
-      { "name": "PSR-12", "icon": "fas fa-code" },
-      { "name": "PSR-4", "icon": "fas fa-code" }
+      {
+        "name": "HTML",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "CSS",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "Nginx",
+        "icon": "fab fa-nginx"
+      },
+      {
+        "name": "Python",
+        "icon": "fab fa-python"
+      },
+      {
+        "name": "PHP",
+        "icon": "fab fa-php"
+      },
+      {
+        "name": "Docker",
+        "icon": "fab fa-docker"
+      },
+      {
+        "name": "Laravel",
+        "icon": "fab fa-laravel"
+      },
+      {
+        "name": "Linux",
+        "icon": "fab fa-linux"
+      },
+      {
+        "name": "Working with legacy code",
+        "icon": "fas fa-code-branch"
+      },
+      {
+        "name": "VPS/VDS Setup",
+        "icon": "fas fa-server"
+      },
+      {
+        "name": "Databases",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "OOP",
+        "icon": "fas fa-object-group"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "Git",
+        "icon": "fab fa-git-alt"
+      },
+      {
+        "name": "Docker Compose",
+        "icon": "fab fa-docker-compose"
+      },
+      {
+        "name": "OOP Design Patterns",
+        "icon": "fas fa-project-diagram"
+      },
+      {
+        "name": "MySQL",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "PSR-12",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "PSR-4",
+        "icon": "fas fa-code"
+      }
     ]
   },
   "portfolio": {
@@ -143,23 +216,38 @@
         "title": "Presentation Editor (In Development)",
         "description": "A web application for creating and editing presentations, built with React and Redux Toolkit. Focuses on flexibility of the user interface.",
         "links": [
-          { "text": "Website", "url": "https://slider-editor-murat.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
+          {
+            "text": "Website",
+            "url": "https://slider-editor-murat.netlify.app/"
+          },
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/slider-editor"
+          }
         ]
       },
       {
         "title": "E-commerce on Golang (In Development)",
         "description": "A platform for e-commerce with a Go-based backend, using GORM for database management and Docker for environment setup.",
         "links": [
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/shraphka_echo"
+          }
         ]
       },
       {
         "title": "Business Card Website for Lawyers",
         "description": "A minimalist business card site with a responsive design aimed at presenting legal services. Uses modern technologies for optimal loading and display.",
         "links": [
-          { "text": "Website", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
+          {
+            "text": "Website",
+            "url": "https://aquamarine-moonbeam-84b37a.netlify.app/"
+          },
+          {
+            "text": "GitHub",
+            "url": "https://github.com/muratkosshi/urist_online"
+          }
         ]
       }
     ]

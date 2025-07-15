@@ -68,6 +68,15 @@ const JobPeriod = styled.span`
   color: ${props => props.theme.colors.text.secondary};
 `;
 
+const JobDates = styled.div`
+  color: ${props => props.theme.colors.text.muted};
+  font-size: 0.9rem;
+  margin-bottom: ${props => props.theme.spacing.sm};
+  display: flex;
+  align-items: center;
+  gap: ${props => props.theme.spacing.sm};
+`;
+
 const ResponsibilitiesList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -163,6 +172,27 @@ const WorkExperience = ({ title, jobs, language }) => {
     }
   };
 
+  const formatDate = (dateString, lang) => {
+    if (dateString.toLowerCase() === "present") {
+      switch (lang) {
+        case 'en': return "Present";
+        case 'ru': return "Настоящее время";
+        case 'kz': return "Қазіргі уақыт";
+        default: return "Present";
+      }
+    }
+    
+    const [year, month] = dateString.split('-');
+    const monthNames = {
+      'en': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      'ru': ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+      'kz': ['Қаң', 'Ақп', 'Нау', 'Сәу', 'Мам', 'Мау', 'Шіл', 'Там', 'Қыр', 'Қаз', 'Қар', 'Жел']
+    };
+    
+    const monthName = monthNames[lang] ? monthNames[lang][parseInt(month, 10) - 1] : month;
+    return `${monthName} ${year}`;
+  };
+
   useEffect(() => {
     let totalMonths = 0;
     
@@ -199,6 +229,10 @@ const WorkExperience = ({ title, jobs, language }) => {
                 <i className="fas fa-building" />
                 {job.company} · <JobPeriod>{period}</JobPeriod>
               </JobCompany>
+              <JobDates>
+                <i className="fas fa-calendar-alt" />
+                {formatDate(job.startDate, language)} — {formatDate(job.endDate, language)}
+              </JobDates>
               <ResponsibilitiesList>
                 {job.responsibilities.map((responsibility, idx) => (
                   <ResponsibilityItem key={idx}>
