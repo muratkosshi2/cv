@@ -126,7 +126,7 @@ function App() {
           onImportData={importData}
         />
         
-        <MainCard>
+        <MainCard data-resume-container>
           <ContentWrapper>
             <Header />
             <LanguageSelector 

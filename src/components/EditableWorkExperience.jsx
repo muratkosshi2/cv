@@ -272,17 +272,17 @@ const EditableWorkExperience = ({ children, isEditMode, jobs, onUpdateJob, onAdd
 
   return (
     <>
-      <EditContainer>
-        <EditButton onClick={handleAdd}>
+      <EditContainer data-edit-container>
+        <EditButton onClick={handleAdd} data-edit-button>
           Добавить позицию
         </EditButton>
         
         {jobs.map((job, index) => (
           <JobCard key={index}>
-            <JobEditButton onClick={() => handleEdit(index)}>
+            <JobEditButton onClick={() => handleEdit(index)} data-edit-button>
               Редактировать
             </JobEditButton>
-            <JobDeleteButton onClick={() => handleDelete(index)}>
+            <JobDeleteButton onClick={() => handleDelete(index)} data-edit-button>
               Удалить
             </JobDeleteButton>
             

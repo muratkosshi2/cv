@@ -138,8 +138,8 @@ const EditableSection = ({ children, isEditMode, onEdit, title, type = 'text' })
 
   return (
     <>
-      <EditContainer>
-        <EditButton onClick={handleEdit}>
+      <EditContainer data-edit-container>
+        <EditButton onClick={handleEdit} data-edit-button>
           Редактировать
         </EditButton>
         {children}

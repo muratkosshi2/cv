@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { exportToPDF } from '../utils/pdfExport';
 
 const AdminContainer = styled.div`
   position: fixed;
@@ -78,6 +79,7 @@ const AdminPanel = ({ isEditMode, onToggleEditMode, onSaveChanges, onResetData, 
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
+  const [isExporting, setIsExporting] = useState(false);
 
   const ADMIN_PASSWORD = 'admin123';
 
@@ -130,6 +132,22 @@ const AdminPanel = ({ isEditMode, onToggleEditMode, onSaveChanges, onResetData, 
     }
   };
 
+  const handleExportPDF = async () => {
+    setIsExporting(true);
+    try {
+      const result = await exportToPDF('root', 'resume');
+      if (result.success) {
+        alert('PDF успешно создан и скачан');
+      } else {
+        alert('Ошибка при создании PDF: ' + result.message);
+      }
+    } catch (error) {
+      alert('Ошибка при создании PDF: ' + error.message);
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   if (!isAuthenticated) {
     return (
       <AdminContainer>
@@ -159,7 +177,7 @@ const AdminPanel = ({ isEditMode, onToggleEditMode, onSaveChanges, onResetData, 
   }
 
   return (
-    <AdminContainer>
+    <AdminContainer data-admin-panel>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
         <AdminButton isActive={isEditMode} onClick={handleToggleEdit}>
           {isEditMode ? 'Выйти из редактирования' : 'Редактировать'}
@@ -169,7 +187,7 @@ const AdminPanel = ({ isEditMode, onToggleEditMode, onSaveChanges, onResetData, 
           <>
             <Button onClick={onSaveChanges}>Сохранить</Button>
             <Button onClick={onResetData}>Сбросить</Button>
-            <Button onClick={onExportData}>Экспорт</Button>
+            <Button onClick={onExportData}>Экспорт JSON</Button>
             <label>
               <Button as="span">Импорт</Button>
               <input
@@ -181,6 +199,10 @@ const AdminPanel = ({ isEditMode, onToggleEditMode, onSaveChanges, onResetData, 
             </label>
           </>
         )}
+        
+        <Button onClick={handleExportPDF} disabled={isExporting}>
+          {isExporting ? 'Создание PDF...' : 'Экспорт PDF'}
+        </Button>
         
         <AdminButton onClick={handleLogout}>
           Выйти
