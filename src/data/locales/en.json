@@ -1,259 +1,297 @@
 {
-  "summary": {
-    "title": "Professional Summary",
-    "content": "\n        <p>Male, 22 years old, born on April 8, 2002. Based in Aktobe, Kazakhstan. Open to relocation to Almaty or Astana and business trips.</p>\n        <p>Experienced Full Stack Developer with a focus on backend development, but also hands-on frontend skills. Interested in AI, microservices, and DevOps.</p>\n      "
+  "name": "Murat Kosshi",
+  "role": "Full Stack Developer · Backend + Flutter",
+  "location": "Aktobe, Kazakhstan · open to relocating to Almaty or Astana",
+  "labels": {
+    "summary": "About",
+    "highlights": "Highlights",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "present": "present",
+    "contributions": "{n} contributions in the last year",
+    "less": "Less",
+    "more": "More"
   },
-  "experience": {
-    "title": "Work Experience",
-    "jobs": [
-      {
-        "title": "Programmer-Developer",
-        "company": "LLP \"Center for Innovative Technologies 'Өрлеу'\"",
-        "startDate": "2024-01",
-        "endDate": "present",
-        "responsibilities": [
-          "Developing new products from scratch and supporting existing ones.",
-          "Debugging and fixing production and test environment issues.",
-          "Working with Yii2 (PHP), PostgreSQL, Redis for API and business logic.",
-          "Implemented Redis caching for student transcript exports, significantly reducing DB load and speeding up data rendering.",
-          "Used Redis key dependencies tied to <code>student_id</code> to update only changed records.",
-          "Created and maintained DB migrations in Yii2/PostgreSQL.",
-          "Implemented a \"Resit Journal\" module for students retaking exams; collaborated with a ReactJS frontend developer.",
-          "Fixed bugs and made minor frontend updates on ReactJS when needed.",
-          "<strong>AI-Pitchmaker (slides.citorleu.kz):</strong>\n            <ul>\n              <li>Set up a FastAPI backend with Python, SQLAlchemy, Pydantic, Alembic.</li>\n              <li>Integrated JWT authorization for seamless user logins across multiple services.</li>\n              <li>Introduced Celery + Redis for asynchronous task processing (e.g., generating AI-based presentations) and offloading the main thread.</li>\n              <li>Built a ReactJS + Redux Toolkit frontend and an admin panel using SQLAdmin.</li>\n              <li>Occasionally performed DevOps tasks (cron jobs via crontab on the server, log monitoring, restarts) together with the main DevOps specialist.</li>\n              <li>In-code scheduling via AsyncIOScheduler for daily subscription updates.</li>\n            </ul>"
-        ]
-      },
-      {
-        "title": "Backend Developer",
-        "company": "FIN GROUP",
-        "startDate": "2025-05-01",
-        "endDate": "present",
-        "responsibilities": [
-          "Administration of MySQL databases",
-          "Technical support from 9:00 to 18:00",
-          "Code refactoring",
-          "Following coding patterns and principles: MVC, DRY, SOLID",
-          "Bug diagnostics and fixing",
-          "Establishing workflows and communicating with taxi fleet managers in case of system failures or errors"
-        ]
-      },
-      {
-        "title": "Lead Developer",
-        "company": "TopNetworks HUB",
-        "startDate": "2023-09",
-        "endDate": "2024-05",
-        "responsibilities": [
-          "Maintained a WordPress website and a Telegram bot written in Node.js.",
-          "Handled layout, server administration, DevOps tasks, data parsing, and SEO optimization."
-        ]
-      },
-      {
-        "title": "Full Stack Developer",
-        "company": "eDauir",
-        "startDate": "2023-07",
-        "endDate": "2023-12",
-        "responsibilities": [
-          "Built features with Laravel (PHP 8) for <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>.",
-          "Deployed VPS (Ubuntu 22.04) with HestiaCP, worked on Figma layouts, HTML, SCSS, WebPack, JS landings.",
-          "Created APIs, worked with legacy code, used Docker Compose for containerization.",
-          "Introduced testing on Appium + Flutter + Python and documented API requests in Postman.",
-          "Key projects:\n            <ul>\n              <li><a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> – Flutter + pure PHP + MySQL (support & bug fixes).</li>\n              <li><a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> – Laravel + MySQL + Docker (added custom functionalities).</li>\n              <li><a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> – Layout with WebPack + SCSS.</li>\n            </ul>"
-        ]
-      },
-      {
-        "title": "Web Developer",
-        "company": "halykmart.kz",
-        "startDate": "2023-02",
-        "endDate": "2023-07",
-        "responsibilities": [
-          "Optimized and set up caching.",
-          "Supported a WordPress-based online store.",
-          "Performed data parsing in Python and handled data uploads."
-        ]
-      },
-      {
-        "title": "Technical Support Specialist",
-        "company": "AsiaBusinessAccounting",
-        "startDate": "2023-01",
-        "endDate": "2023-02",
-        "responsibilities": [
-          "Installed and configured Umag software.",
-          "Set up 1C-based cash registers.",
-          "Trained users and provided technical support."
-        ]
-      },
-      {
-        "title": "Individual Entrepreneur",
-        "company": "EOS",
-        "startDate": "2021-04",
-        "endDate": "2021-12",
-        "responsibilities": [
-          "Interacted with clients, performed layouts, and created APIs.",
-          "Developed web applications and explored new technologies.",
-          "Used Django REST, ReactJS, Linux, Gunicorn, Redux.",
-          "Collaborated with designers for UI/UX ideas."
-        ]
-      }
-
-
-    ]
-  },
-  "education": {
-    "title": "Education",
-    "content": "\n        <p>Aktobe Higher Polytechnic College · 2021</p>\n        <p>Information Technology, Web Developer</p>\n      "
-  },
-  "skills": {
-    "title": "Skills",
-    "items": [
-      {
-        "name": "HTML",
-        "icon": "fas fa-code"
-      },
-      {
-        "name": "CSS",
-        "icon": "fas fa-code"
-      },
-      {
-        "name": "Nginx",
-        "icon": "fab fa-nginx"
-      },
-      {
-        "name": "Python",
-        "icon": "fab fa-python"
-      },
-      {
-        "name": "PHP",
-        "icon": "fab fa-php"
-      },
-      {
-        "name": "Docker",
-        "icon": "fab fa-docker"
-      },
-      {
-        "name": "Laravel",
-        "icon": "fab fa-laravel"
-      },
-      {
-        "name": "Linux",
-        "icon": "fab fa-linux"
-      },
-      {
-        "name": "Working with legacy code",
-        "icon": "fas fa-code-branch"
-      },
-      {
-        "name": "VPS/VDS Setup",
-        "icon": "fas fa-server"
-      },
-      {
-        "name": "Databases",
-        "icon": "fas fa-database"
-      },
-      {
-        "name": "OOP",
-        "icon": "fas fa-object-group"
-      },
-      {
-        "name": "PostgreSQL",
-        "icon": "fas fa-database"
-      },
-      {
-        "name": "Git",
-        "icon": "fab fa-git-alt"
-      },
-      {
-        "name": "Docker Compose",
-        "icon": "fab fa-docker-compose"
-      },
-      {
-        "name": "OOP Design Patterns",
-        "icon": "fas fa-project-diagram"
-      },
-      {
-        "name": "MySQL",
-        "icon": "fas fa-database"
-      },
-      {
-        "name": "PSR-12",
-        "icon": "fas fa-code"
-      },
-      {
-        "name": "PSR-4",
-        "icon": "fas fa-code"
-      }
-    ]
-  },
-  "portfolio": {
-    "title": "Portfolio",
-    "projects": [
-      {
-        "title": "Kostanay MIA Academy Site",
-        "description": "A project for the Kostanay MIA Academy, including new modules and enhancements to the admin panel using Yii2 and PostgreSQL.",
-        "image": "/kostacademy.citorleu.kz_.png",
-        "link": "https://qpa.edu.kz/",
-        "linkText": "View Project"
-      },
-      {
-        "title": "Karaganda MIA Academy Site",
-        "description": "Project for the Karaganda MIA Academy, including API and GraphQL support for the academy's information system.",
-        "image": "/academy.bilimal.kz_.png",
-        "link": "https://academy.bilimal.kz/",
-        "linkText": "View Project"
-      },
-      {
-        "title": "Slides.citorleu.kz",
-        "description": "Developed from scratch for generating AI-based presentations using ChatGPT, integrated with Stable Diffusion and Google Image Search.",
-        "image": "/slides.citorleu.kz_.png",
-        "link": "https://slides.citorleu.kz/",
-        "linkText": "View Project"
-      }
-    ]
-  },
-  "personalProjects": {
-    "title": "Personal Projects",
-    "projects": [
-      {
-        "title": "Presentation Editor (In Development)",
-        "description": "A web application for creating and editing presentations, built with React and Redux Toolkit. Focuses on flexibility of the user interface.",
-        "links": [
-          {
-            "text": "Website",
-            "url": "https://slider-editor-murat.netlify.app/"
-          },
-          {
-            "text": "GitHub",
-            "url": "https://github.com/muratkosshi/slider-editor"
-          }
-        ]
-      },
-      {
-        "title": "E-commerce on Golang (In Development)",
-        "description": "A platform for e-commerce with a Go-based backend, using GORM for database management and Docker for environment setup.",
-        "links": [
-          {
-            "text": "GitHub",
-            "url": "https://github.com/muratkosshi/shraphka_echo"
-          }
-        ]
-      },
-      {
-        "title": "Business Card Website for Lawyers",
-        "description": "A minimalist business card site with a responsive design aimed at presenting legal services. Uses modern technologies for optimal loading and display.",
-        "links": [
-          {
-            "text": "Website",
-            "url": "https://aquamarine-moonbeam-84b37a.netlify.app/"
-          },
-          {
-            "text": "GitHub",
-            "url": "https://github.com/muratkosshi/urist_online"
-          }
-        ]
-      }
-    ]
-  },
-  "additionalInfo": {
-    "title": "Additional Information",
-    "content": "\n        <p>GitHub: <a href=\"https://github.com/muratkosshi\" target=\"_blank\"><i class=\"fab fa-github\"></i> github.com/muratkosshi</a></p>\n      "
-  }
+  "summary": "<p>Backend-leaning full stack developer with 3+ years of commercial experience. I currently work on a production ride-hailing platform: a Laravel backend and Flutter apps for riders and drivers, shipped as several brands from one codebase.</p><p>I own tasks end to end: gather requirements with the business, design, build, test on emulators and real devices, and ship to production. I work in a pair with a colleague and we review each other's code.</p>",
+  "highlights": [
+    "We had been building the platform long before the surge; in October 2026, after Yandex Go went down, it got a sudden wave of new riders and drivers. The system held the load; meanwhile I was finding and fixing bottlenecks and bugs directly in production.",
+    "Reworked driver location storage: instead of an ever-growing GPS history there is one current position per driver, and history is written only during a ride. Nearest-driver search now runs on the latest-positions table.",
+    "Designed and shipped city separation on a \"one city = one fleet\" model: each fleet sees only its own drivers and orders and manages its city boundary, pricing and staff roles.",
+    "Added Comfort and Business service classes and tested the full order flow from fare selection to ride completion."
+  ],
+  "experience": [
+    {
+      "title": "Backend / Mobile Developer",
+      "company": "FIN GROUP",
+      "start": "2025-05",
+      "end": "present",
+      "intro": "White-label ride-hailing platform: one backend and two Flutter apps (rider and driver) released as OTAN KZ, AllCity, Uly Taxi and Kaspyi Taxi.",
+      "stack": [
+        "Laravel 10",
+        "PostgreSQL + PostGIS",
+        "Redis",
+        "Horizon",
+        "Filament",
+        "Pusher",
+        "FCM",
+        "Flutter / BLoC",
+        "2GIS",
+        "Docker",
+        "GitLab CI",
+        "Go"
+      ],
+      "items": [
+        "Keep production stable under growing load: dig through logs and errors, find bottlenecks, optimize queries and background jobs.",
+        "Optimized geodata handling: a latest-positions table <code>driver_positions</code>, daily cleanup of old tracks, offline status based on position freshness.",
+        "Fleet and city separation: multi-tenancy in the Filament admin, permissions via fleet roles, city boundary on the map, per-city pricing. The main fleet still sees everything.",
+        "Comfort and Business fares: backend, app UI, testing.",
+        "Improved order dispatch: sequential offers to the nearest driver. Fixed cases where driver search stopped early.",
+        "Test releases on Android and iOS emulators and real devices. Wrote ride simulation scripts: driver and rider in separate emulators, moving along real roads via Valhalla.",
+        "Work directly with the business and fleet managers: collect requirements, estimate, ship features fast, help during incidents.",
+        "Review merge requests, write tests, track tech debt."
+      ],
+      "projects": [
+        {
+          "name": "Order service prototype in Go",
+          "items": [
+            "Spike for migrating the order service from Laravel to Go with no changes to the mobile app or DB schema.",
+            "Gin, pgx, sqlc, Clean Architecture, TDD; Sanctum token auth, Docker + Traefik."
+          ]
+        },
+        {
+          "name": "Optovka — wholesale marketplace",
+          "items": [
+            "Laravel backend improvements.",
+            "Standalone Flutter store app: WebView shell with SSO, connectivity handling and external links."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Center for Innovative Technologies \"Orleu\"",
+      "start": "2024-01",
+      "end": "present",
+      "stack": [
+        "Yii2",
+        "PHP",
+        "PostgreSQL",
+        "Redis",
+        "FastAPI",
+        "React"
+      ],
+      "items": [
+        "Build new products from scratch and maintain existing ones, fix bugs in production and staging.",
+        "Added Redis caching for grade transcript exports, noticeably cutting DB load and speeding up rendering. Cache dependencies by <code>student_id</code> refresh only changed records.",
+        "Built the exam retake log module together with a React frontend developer.",
+        "Yii2/PostgreSQL migrations, React frontend fixes."
+      ],
+      "projects": [
+        {
+          "name": "AI-Pitchmaker (slides.bilimal.kz)",
+          "items": [
+            "FastAPI backend: SQLAlchemy, Pydantic, Alembic, SQLAdmin admin panel.",
+            "JWT auth for single sign-on across services.",
+            "Celery + Redis for async AI presentation generation; AsyncIOScheduler for daily subscription updates.",
+            "React + Redux Toolkit frontend, DevOps tasks together with a DevOps engineer."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Lead Developer",
+      "company": "TopNetworks HUB",
+      "start": "2023-09",
+      "end": "2024-05",
+      "items": [
+        "Maintained a WordPress site and a Node.js Telegram bot.",
+        "Layout, server administration, DevOps, scraping, SEO."
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "eDauir",
+      "start": "2023-07",
+      "end": "2023-12",
+      "items": [
+        "Laravel (PHP 8) + MySQL + Docker Compose: feature work on <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>.",
+        "Support and bug fixes for <a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> (Flutter + PHP + MySQL), layout for <a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> (WebPack + SCSS).",
+        "VPS setup (Ubuntu 22.04, HestiaCP), Figma mockups.",
+        "Introduced Appium + Python UI tests for a Flutter app, documented the API in Postman."
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "company": "halykmart.kz",
+      "start": "2023-02",
+      "end": "2023-07",
+      "items": [
+        "Built and maintained a WordPress online store, set up caching.",
+        "Python data scraping and import."
+      ]
+    },
+    {
+      "title": "Technical Support Specialist",
+      "company": "AsiaBusinessUchet",
+      "start": "2023-01",
+      "end": "2023-02",
+      "items": [
+        "Installed and configured Umag and 1C cash registers, trained users."
+      ]
+    },
+    {
+      "title": "Sole Proprietor",
+      "company": "EOS",
+      "start": "2021-04",
+      "end": "2021-12",
+      "items": [
+        "Client web apps on Django REST and React/Redux, deployed on Linux + Gunicorn, worked with a designer."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "OTAN — ride ordering",
+      "description": "Rider app: city rides, delivery, freight and intercity trips. Two fare modes: fixed price and \"name your price\". A safe-ride mode for women and children, live car tracking on the map. My part: order API, fares, dispatch, on-device release testing.",
+      "links": [
+        {
+          "text": "App Store",
+          "url": "https://apps.apple.com/kz/app/id6760775298"
+        },
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=pro.allkz.client"
+        }
+      ],
+      "icon": "/otan/client.png"
+    },
+    {
+      "title": "OTAN KZ — driver app",
+      "description": "Orders go to the nearest driver, drivers work several fares at once and see route and price before accepting. Balance and card payouts, fleet driver management, Russian and Kazakh UI. My part: backend, city and fleet separation, geolocation, Flutter work.",
+      "links": [
+        {
+          "text": "App Store",
+          "url": "https://apps.apple.com/kz/app/id6742089220"
+        },
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.allkz"
+        }
+      ],
+      "icon": "/otan/driver.png"
+    },
+    {
+      "title": "AI-Pitchmaker",
+      "description": "AI presentation generator (ChatGPT) with Stable Diffusion and Google Image Search integration.",
+      "links": [
+        {
+          "text": "slides.bilimal.kz",
+          "url": "https://slides.bilimal.kz/"
+        }
+      ],
+      "icon": "/logos/slides.png"
+    },
+    {
+      "title": "Kostanay Academy of the Ministry of Internal Affairs",
+      "description": "New modules and admin panel improvements on Yii2 and PostgreSQL.",
+      "links": [
+        {
+          "text": "qpa.edu.kz",
+          "url": "https://qpa.edu.kz/"
+        }
+      ],
+      "icon": "/logos/qpa.svg"
+    },
+    {
+      "title": "Astana Academy of the Ministry of Internal Affairs",
+      "description": "New modules and admin panel improvements on Yii2 and PostgreSQL.",
+      "links": [
+        {
+          "text": "aumvd.citorleu.kz",
+          "url": "https://aumvd.citorleu.kz/"
+        }
+      ],
+      "icon": "/logos/aumvd.png"
+    },
+    {
+      "title": "Karaganda Academy of the Ministry of Internal Affairs",
+      "description": "API, GraphQL and the academy information system.",
+      "links": [
+        {
+          "text": "academy.bilimal.kz",
+          "url": "https://academy.bilimal.kz/"
+        }
+      ],
+      "icon": "/logos/bilimal.png"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend",
+      "items": [
+        "PHP 8",
+        "Laravel",
+        "Yii2",
+        "Filament",
+        "Python",
+        "FastAPI",
+        "Django REST",
+        "Go",
+        "REST API"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "PostgreSQL",
+        "PostGIS",
+        "MySQL",
+        "Redis",
+        "queues (Horizon, Celery)"
+      ]
+    },
+    {
+      "group": "Mobile / Front",
+      "items": [
+        "Flutter",
+        "Dart",
+        "BLoC",
+        "React",
+        "Redux Toolkit",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "group": "Infrastructure",
+      "items": [
+        "Docker",
+        "Docker Compose",
+        "Nginx",
+        "Linux",
+        "VPS",
+        "Git",
+        "GitLab CI"
+      ]
+    },
+    {
+      "group": "Practices",
+      "items": [
+        "code review",
+        "SOLID",
+        "TDD",
+        "PSR-12",
+        "legacy code",
+        "on-device testing"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "place": "Aktobe Higher Polytechnic College",
+      "year": "2021",
+      "field": "Information Technology, Web Development"
+    }
+  ]
 }

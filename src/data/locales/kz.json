@@ -1,171 +1,297 @@
 {
-  "summary": {
-    "title": "Кәсіби Қысқаша Мазмұны",
-    "content": "\n        <p>Ер адам, 22 жаста, 2002 жылдың 8 сәуірінде туған. Ақтөбе қаласында тұрады, Қазақстан. Алматы немесе Астана қаласына көшуге, іссапарларға дайын.</p>\n        <p>Full Stack Developer (негізгі бағытым – backend), қажет болғанда frontend-те де жұмыс істеймін. ЖИ, микросервистік архитектура және DevOps салаларына қызығушылық бар.</p>\n      "
+  "name": "Мурат Косши",
+  "role": "Full Stack әзірлеуші · Backend + Flutter",
+  "location": "Ақтөбе, Қазақстан · Алматыға немесе Астанаға көшуге дайынмын",
+  "labels": {
+    "summary": "Өзім туралы",
+    "highlights": "Жетістіктер",
+    "experience": "Жұмыс тәжірибесі",
+    "projects": "Жобалар",
+    "skills": "Дағдылар",
+    "education": "Білім",
+    "present": "қазір",
+    "contributions": "Соңғы жылда {n} үлес",
+    "less": "Аз",
+    "more": "Көп"
   },
-  "experience": {
-    "title": "Жұмыс Тәжірибесі",
-    "jobs": [
-      {
-        "title": "Бағдарламашы-әзірлеуші",
-        "company": "\"Өрлеу\" Инновациялық Технологиялар Орталығы ЖШС",
-        "startDate": "2024-01",
-        "endDate": "present",
-        "responsibilities": [
-          "Жаңа өнімдерді нөлден бастап әзірлеу және қолданыстағы шешімдерді қолдау.",
-          "Өндірістік (продакшн) және тесттік ортадағы қателерді іздеу және түзету.",
-          "Yii2 (PHP), PostgreSQL, Redis арқылы API мен бизнес-логика әзірлеу.",
-          "Студенттің бағаларын экспорттау барысында DB жүктемесін төмендету үшін Redis кэштеуін енгіздім.",
-          "<code>student_id</code> бойынша тәуелділікті қолданып, тек өзгерген жазбаларды жаңарту тәсілін қолдандым.",
-          "Yii2/PostgreSQL-те миграцияларды жасап, қолдап отырдым.",
-          "Емтиханды қайта тапсыратын студенттерді бақылау үшін «Журнал переводников» модулін жасадым; ReactJS-пен жұмыс істейтін frontend-дизайнермен бірлесе жұмыс істедім.",
-          "ReactJS-тағы кейбір қателерді түзетіп, қажет болған жағдайда фронтендті жетілдірдім.",
-          "<strong>AI-Pitchmaker (slides.citorleu.kz):</strong>\n            <ul>\n              <li>FastAPI (Python), SQLAlchemy, Pydantic, Alembic негізінде backend орнаттым.</li>\n              <li>Бірнеше сервис арасында бірыңғай авторизация үшін JWT-ті біріктірдім.</li>\n              <li>Негізгі ағынды босату үшін Celery + Redis арқылы асинхронды тапсырмалар жүйесін қостым (ИИ-презентацияларды генерациялау).</li>\n              <li>ReactJS + Redux Toolkit-те фронтендті әзірледім, SQLAdmin админ-панелін орнаттым.</li>\n              <li>Кейде DevOps-әзірлеушімен бірлесе серверге қатысты жұмыстарды (cron баптау, логтарды тексеру, қолданбаны қайта іске қосу) атқарамын.</li>\n              <li>AsyncIOScheduler арқылы күнделікті жазылуларды жаңартуды жоспарлауды орнаттым.</li>\n            </ul>"
-        ]
-      },
-      {
-        "title": "Жетекші әзірлеуші",
-        "company": "TopNetworks HUB",
-        "startDate": "2023-09",
-        "endDate": "2024-05",
-        "responsibilities": [
-          "WordPress-тағы сайтты және Nodejs-тағы Telegram-ботты қолдау.",
-          "Верстка, сервер әкімшілігі, DevOps, парсинг, SEO оңтайландыру."
-        ]
-      },
-      {
-        "title": "Full Stack Developer",
-        "company": "eDauir",
-        "startDate": "2023-07",
-        "endDate": "2023-12",
-        "responsibilities": [
-          "Laravel (PHP 8) арқылы <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a>-ке функционал қостым.",
-          "VPS (Ubuntu 22.04) орнаттым (HestiaCP), Figma-дағы макеттерді өңдедім, HTML, SCSS, WebPack, JS арқылы лендинг жасадым.",
-          "API жасадым, бөтен кодпен жұмыс істедім, Docker Compose пайдаландым.",
-          "Appium + Flutter + Python арқылы тестілеуді енгіздім, Postman-да API сұрауларын құжаттадым.",
-          "Негізгі жобалар:\n            <ul>\n              <li><a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> – Flutter + таза PHP + MySQL (қолдау және қателерді түзету).</li>\n              <li><a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> – Laravel + MySQL + Docker (тапсырыс беруші талабына сай функционал қосу).</li>\n              <li><a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> – WebPack + SCSS көмегімен верстка.</li>\n            </ul>"
-        ]
-      },
-      {
-        "title": "Web-әзірлеуші",
-        "company": "halykmart.kz",
-        "startDate": "2023-02",
-        "endDate": "2023-07",
-        "responsibilities": [
-          "Оңтайландыру және кэштеуді баптау.",
-          "WordPress-та интернет-дүкенді қолдау және дамыту.",
-          "Python арқылы деректерді парсинг жасау, сайтқа жүктеу."
-        ]
-      },
-      {
-        "title": "Техникалық қолдау маманы",
-        "company": "АзияБизнесУчет",
-        "startDate": "2023-01",
-        "endDate": "2023-02",
-        "responsibilities": [
-          "Umag бағдарламалық қамтылымын орнату және баптау.",
-          "1С кассаларын баптау.",
-          "Пайдаланушыларды оқыту, техникалық қолдау көрсету."
-        ]
-      },
-      {
-        "title": "Жеке кәсіпкер",
-        "company": "EOS",
-        "startDate": "2021-04",
-        "endDate": "2021-12",
-        "responsibilities": [
-          "Клиенттермен байланыс, верстка, API жасау.",
-          "Веб-қосымшалар әзірлеу, жаңа технологияларды үйрену.",
-          "Django REST, ReactJS, Linux, Gunicorn, Redux.",
-          "Дизайнермен бірлесе жұмыс істеу."
-        ]
-      }
-    ]
-  },
-  "education": {
-    "title": "Білім",
-    "content": "\n        <p>Актюбинск Жоғары Политехникалық Колледжі · 2021</p>\n        <p>Ақпараттық технологиялар, Веб-әзірлеу</p>\n      "
-  },
-  "skills": {
-    "title": "Дағдылар",
-    "items": [
-      { "name": "HTML", "icon": "fas fa-code" },
-      { "name": "CSS", "icon": "fas fa-code" },
-      { "name": "Nginx", "icon": "fab fa-nginx" },
-      { "name": "Python", "icon": "fab fa-python" },
-      { "name": "PHP", "icon": "fab fa-php" },
-      { "name": "Docker", "icon": "fab fa-docker" },
-      { "name": "Laravel", "icon": "fab fa-laravel" },
-      { "name": "Linux", "icon": "fab fa-linux" },
-      { "name": "Бөтен кодпен жұмыс", "icon": "fas fa-code-branch" },
-      { "name": "VPS/VDS орнату", "icon": "fas fa-server" },
-      { "name": "Деректер базалары", "icon": "fas fa-database" },
-      { "name": "OOP", "icon": "fas fa-object-group" },
-      { "name": "PostgreSQL", "icon": "fas fa-database" },
-      { "name": "Git", "icon": "fab fa-git-alt" },
-      { "name": "Docker Compose", "icon": "fab fa-docker-compose" },
-      { "name": "ООП дизайн үлгілері", "icon": "fas fa-project-diagram" },
-      { "name": "MySQL", "icon": "fas fa-database" },
-      { "name": "PSR-12", "icon": "fas fa-code" },
-      { "name": "PSR-4", "icon": "fas fa-code" }
-    ]
-  },
-  "portfolio": {
-    "title": "Портфолио",
-    "projects": [
-      {
-        "title": "Костанай ІІМ академиясы",
-        "description": "Костанай ІІМ академиясына арналған жоба: Yii2 және PostgreSQL арқылы жаңа модульдер мен админка жетілдіру.",
-        "image": "/kostacademy.citorleu.kz_.png",
-        "link": "https://qpa.edu.kz/",
-        "linkText": "Жобаны қарау"
-      },
-      {
-        "title": "Қарағанды ІІМ академиясы",
-        "description": "Қарағанды ІІМ академиясына арналған жоба: API, GraphQL және академияның ақпараттық жүйесін қолдау.",
-        "image": "/academy.bilimal.kz_.png",
-        "link": "https://academy.bilimal.kz/",
-        "linkText": "Жобаны қарау"
-      },
-      {
-        "title": "Slides.citorleu.kz",
-        "description": "ИИ (ChatGPT) көмегімен презентацияларды генерациялау веб-қосымшасы. Stable Diffusion және Google Image Search-пен біріктірілді.",
-        "image": "/slides.citorleu.kz_.png",
-        "link": "https://slides.citorleu.kz/",
-        "linkText": "Жобаны қарау"
-      }
-    ]
-  },
-  "personalProjects": {
-    "title": "Жеке жобалар",
-    "projects": [
-      {
-        "title": "Презентация редакторы (әзірлену үстінде)",
-        "description": "React, Redux Toolkit негізінде презентацияларды құру және өңдеу веб-қосымшасы. Пайдаланушы интерфейсінің икемділігіне басымдық берілген.",
-        "links": [
-          { "text": "Сайт", "url": "https://slider-editor-murat.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/slider-editor" }
-        ]
-      },
-      {
-        "title": "Golang-та интернет дүкен (әзірлену үстінде)",
-        "description": "GORM мен Docker пайдаланатын Go негізінде e-commerce платформасы.",
-        "links": [
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/shraphka_echo" }
-        ]
-      },
-      {
-        "title": "Заңгерлерге арналған сайт-визитка",
-        "description": "Адаптивті дизайндағы минималистік визитка сайты. Жылдам жүктеу үшін заманауи технологиялар қолданылды.",
-        "links": [
-          { "text": "Сайт", "url": "https://aquamarine-moonbeam-84b37a.netlify.app/" },
-          { "text": "GitHub", "url": "https://github.com/muratkosshi/urist_online" }
-        ]
-      }
-    ]
-  },
-  "additionalInfo": {
-    "title": "Қосымша ақпарат",
-    "content": "\n        <p>GitHub: <a href=\"https://github.com/muratkosshi\" target=\"_blank\"><i class=\"fab fa-github\"></i> github.com/muratkosshi</a></p>\n      "
-  }
+  "summary": "<p>Бэкендке басымдық беретін Full Stack әзірлеуші, коммерциялық тәжірибем 3 жылдан асады. Қазір продакшендегі такси платформасын дамытамын: Laravel бэкенді, жолаушы мен жүргізушіге арналған Flutter қосымшалары, бір кодтық базада бірнеше бренд.</p><p>Тапсырманы басынан аяғына дейін алып жүремін: бизнеспен талаптарды талқылаймын, жобалаймын, іске асырамын, эмуляторларда және нақты құрылғыларда тестілеймін, продакшенге шығарамын. Әріптесіммен жұпта жұмыс істеймін, бір-біріміздің кодымызға ревью жасаймыз.</p>",
+  "highlights": [
+    "Платформаны көптен бері дамытып келдік, ал 2026 жылдың қазан айында Яндекс Go құлағаннан кейін оған жаңа жолаушылар мен жүргізушілер ағыны келді. Жүйе жүктемеге шыдады; осы уақытта мен продакшендегі тар жерлер мен қателерді тауып, түзеттім.",
+    "Жүргізушілердің геопозицияларын сақтауды қайта жасадым: үнемі өсетін GPS тарихының орнына әр жүргізушіге бір ағымдағы позиция, тарих тек сапар кезінде жазылады. Жақын жүргізушіні іздеу соңғы позициялар кестесіне көшірілді.",
+    "«Бір қала = бір парк» моделі бойынша қалаларға бөлуді жобалап, енгіздім: парк тек өз жүргізушілері мен тапсырыстарын көреді, қала шекарасын, тарифтерді және қызметкерлер рөлдерін өзі баптайды.",
+    "«Комфорт» және «Бизнес» қызмет кластарын қосып, тапсырыстың тарифтен сапар аяқталғанға дейінгі толық сценарийін тексердім."
+  ],
+  "experience": [
+    {
+      "title": "Backend / Mobile әзірлеуші",
+      "company": "FIN GROUP",
+      "start": "2025-05",
+      "end": "present",
+      "intro": "White-label такси платформасы: бір бэкенд және OTAN KZ, AllCity, Uly Taxi, Kaspyi Taxi брендтерімен шығатын екі Flutter қосымшасы (жолаушы және жүргізуші).",
+      "stack": [
+        "Laravel 10",
+        "PostgreSQL + PostGIS",
+        "Redis",
+        "Horizon",
+        "Filament",
+        "Pusher",
+        "FCM",
+        "Flutter / BLoC",
+        "2GIS",
+        "Docker",
+        "GitLab CI",
+        "Go"
+      ],
+      "items": [
+        "Өсіп жатқан жүктеме кезінде продакшенді қолдаймын: логтар мен қателерді талдаймын, тар жерлерді табамын, сұраулар мен фондық тапсырмаларды оңтайландырамын.",
+        "Геодеректермен жұмысты оңтайландырдым: соңғы позициялар кестесі <code>driver_positions</code>, ескі тректерді күнделікті тазалау, «офлайн» мәртебесін позицияның жаңалығы бойынша анықтау.",
+        "Парктер мен қалаларға бөлу: Filament әкімшілік панеліндегі мультитенанттылық, парк рөлдері арқылы құқықтар, картадағы қала шекарасы, қала бойынша бағалар. Басты парк бәрін көреді.",
+        "«Комфорт» және «Бизнес» тарифтері: бэкенд, қосымшалардағы көрсетілім, тестілеу.",
+        "Тапсырыстарды диспетчерлеуді жетілдірдім: тапсырысты ең жақын жүргізушіге кезекпен ұсыну. Жүргізуші іздеу үзіліп қалатын жағдайларды түзеттім.",
+        "Релиздерді Android және iOS эмуляторларында және нақты құрылғыларда тестілеймін. Сапарды симуляциялау скрипттерін жаздым: жүргізуші мен жолаушы әртүрлі эмуляторларда, Valhalla арқылы нақты жолдармен қозғалады.",
+        "Бизнеспен және таксопарк менеджерлерімен тікелей жұмыс істеймін: талаптарды жинаймын, бағалаймын, жаңа функцияларды тез шығарамын, ақаулар кезінде көмектесемін.",
+        "Merge request-терге код-ревью жасаймын, тесттер жазамын, техникалық қарызды бақылаймын."
+      ],
+      "projects": [
+        {
+          "name": "Go тіліндегі тапсырыстар сервисінің прототипі",
+          "items": [
+            "Мобильді қосымша мен ДҚ схемасын өзгертпей, тапсырыстар сервисін Laravel-ден Go-ға көшіру спайкы.",
+            "Gin, pgx, sqlc, Clean Architecture, TDD; Sanctum токендерімен авторизация, Docker + Traefik."
+          ]
+        },
+        {
+          "name": "Optovka — көтерме маркетплейс",
+          "items": [
+            "Laravel бэкендін жетілдіру.",
+            "Дүкеннің жеке Flutter қосымшасы: SSO, желіні және сыртқы сілтемелерді өңдейтін WebView қабығы."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Бағдарламашы-әзірлеуші",
+      "company": "«Өрлеу» Инновациялық Технологиялар Орталығы ЖШС",
+      "start": "2024-01",
+      "end": "present",
+      "stack": [
+        "Yii2",
+        "PHP",
+        "PostgreSQL",
+        "Redis",
+        "FastAPI",
+        "React"
+      ],
+      "items": [
+        "Жаңа өнімдерді нөлден әзірлеу және барларын қолдау, продакшен мен тест стендтеріндегі қателерді түзету.",
+        "Бағалар транскриптін шығару үшін Redis кэшін енгіздім: ДҚ жүктемесін айтарлықтай азайтып, көрсетуді жылдамдаттым. <code>student_id</code> бойынша кэш тәуелділіктері тек өзгерген жазбаларды жаңартады.",
+        "React фронтенд әзірлеушісімен бірге емтиханды қайта тапсыруды есепке алатын модульді іске асырдым.",
+        "Yii2/PostgreSQL миграциялары, React фронтендін жетілдіру."
+      ],
+      "projects": [
+        {
+          "name": "AI-Pitchmaker (slides.bilimal.kz)",
+          "items": [
+            "FastAPI бэкенді: SQLAlchemy, Pydantic, Alembic, SQLAdmin әкімшілік панелі.",
+            "Сервистер арасында бірыңғай кіру үшін JWT авторизациясы.",
+            "ЖИ арқылы презентацияларды асинхронды генерациялау үшін Celery + Redis; жазылымдарды күнделікті жаңарту үшін AsyncIOScheduler.",
+            "React + Redux Toolkit фронтенді, DevOps маманымен бірге DevOps тапсырмалары."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Жетекші әзірлеуші",
+      "company": "TopNetworks HUB",
+      "start": "2023-09",
+      "end": "2024-05",
+      "items": [
+        "WordPress сайтын және Node.js Telegram-ботын қолдау.",
+        "Беттеу, серверді әкімшілендіру, DevOps, парсинг, SEO."
+      ]
+    },
+    {
+      "title": "Full Stack әзірлеуші",
+      "company": "eDauir",
+      "start": "2023-07",
+      "end": "2023-12",
+      "items": [
+        "Laravel (PHP 8) + MySQL + Docker Compose: тапсырыс берушінің талаптары бойынша <a href=\"https://gitlab.com/murat.kosshi/laraclassifier_qainar\" target=\"_blank\">avtomarket.group</a> жобасын жетілдіру.",
+        "<a href=\"https://visite.kz\" target=\"_blank\">visite.kz</a> қолдау және қателерді түзету (Flutter + PHP + MySQL), <a href=\"https://uplawyers.kz\" target=\"_blank\">uplawyers.kz</a> беттеу (WebPack + SCSS).",
+        "VPS баптау (Ubuntu 22.04, HestiaCP), Figma макеттерімен жұмыс.",
+        "Flutter қосымшасы үшін Appium + Python автотесттерін енгіздім, API-ды Postman-да құжаттадым."
+      ]
+    },
+    {
+      "title": "Web-әзірлеуші",
+      "company": "halykmart.kz",
+      "start": "2023-02",
+      "end": "2023-07",
+      "items": [
+        "WordPress интернет-дүкенін әзірлеу және қолдау, кэштеуді баптау.",
+        "Python-да деректерді парсинг жасау және сайтқа жүктеу."
+      ]
+    },
+    {
+      "title": "Техникалық қолдау маманы",
+      "company": "АзияБизнесУчет",
+      "start": "2023-01",
+      "end": "2023-02",
+      "items": [
+        "Umag және 1С кассаларын орнату мен баптау, пайдаланушыларды оқыту."
+      ]
+    },
+    {
+      "title": "Жеке кәсіпкер",
+      "company": "EOS",
+      "start": "2021-04",
+      "end": "2021-12",
+      "items": [
+        "Клиенттерге Django REST және React/Redux негізінде веб-қосымшалар, Linux + Gunicorn-да деплой, дизайнермен жұмыс."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "OTAN — такси шақыру",
+      "description": "Жолаушы қосымшасы: қала ішіндегі такси, жеткізу, жүк тасымалы және қалааралық сапарлар. Екі тариф: тұрақты баға және «өз бағаңды ұсын». Әйелдер мен балаларға арналған қауіпсіз такси режимі, көлікті картада нақты уақытта бақылау. Менің үлесім: тапсырыстар API-ы, тарифтер, диспетчерлеу, релиздерді құрылғыларда тестілеу.",
+      "links": [
+        {
+          "text": "App Store",
+          "url": "https://apps.apple.com/kz/app/id6760775298"
+        },
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=pro.allkz.client"
+        }
+      ],
+      "icon": "/otan/client.png"
+    },
+    {
+      "title": "OTAN KZ — жүргізуші қосымшасы",
+      "description": "Тапсырыс ең жақын жүргізушіге түседі, бірнеше тарифте қатар жұмыс істеуге болады, қабылдағанға дейін маршрут пен баға көрінеді. Баланс және картаға шығару, парк жүргізушілерін басқару, орыс және қазақ тіліндегі интерфейс. Менің үлесім: бэкенд, қалалар мен парктерге бөлу, геопозициялар, Flutter жетілдірулері.",
+      "links": [
+        {
+          "text": "App Store",
+          "url": "https://apps.apple.com/kz/app/id6742089220"
+        },
+        {
+          "text": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.allkz"
+        }
+      ],
+      "icon": "/otan/driver.png"
+    },
+    {
+      "title": "AI-Pitchmaker",
+      "description": "ЖИ (ChatGPT) көмегімен презентациялар генерациялау, Stable Diffusion және Google Image Search интеграциясы.",
+      "links": [
+        {
+          "text": "slides.bilimal.kz",
+          "url": "https://slides.bilimal.kz/"
+        }
+      ],
+      "icon": "/logos/slides.png"
+    },
+    {
+      "title": "ІІМ Қостанай академиясы",
+      "description": "Yii2 және PostgreSQL негізінде жаңа модульдер және әкімшілік панелін жетілдіру.",
+      "links": [
+        {
+          "text": "qpa.edu.kz",
+          "url": "https://qpa.edu.kz/"
+        }
+      ],
+      "icon": "/logos/qpa.svg"
+    },
+    {
+      "title": "ІІМ Астана академиясы",
+      "description": "Yii2 және PostgreSQL негізінде жаңа модульдер және әкімшілік панелін жетілдіру.",
+      "links": [
+        {
+          "text": "aumvd.citorleu.kz",
+          "url": "https://aumvd.citorleu.kz/"
+        }
+      ],
+      "icon": "/logos/aumvd.png"
+    },
+    {
+      "title": "ІІМ Қарағанды академиясы",
+      "description": "API, GraphQL және академияның ақпараттық жүйесі.",
+      "links": [
+        {
+          "text": "academy.bilimal.kz",
+          "url": "https://academy.bilimal.kz/"
+        }
+      ],
+      "icon": "/logos/bilimal.png"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend",
+      "items": [
+        "PHP 8",
+        "Laravel",
+        "Yii2",
+        "Filament",
+        "Python",
+        "FastAPI",
+        "Django REST",
+        "Go",
+        "REST API"
+      ]
+    },
+    {
+      "group": "Деректер",
+      "items": [
+        "PostgreSQL",
+        "PostGIS",
+        "MySQL",
+        "Redis",
+        "кезектер (Horizon, Celery)"
+      ]
+    },
+    {
+      "group": "Mobile / Front",
+      "items": [
+        "Flutter",
+        "Dart",
+        "BLoC",
+        "React",
+        "Redux Toolkit",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "group": "Инфрақұрылым",
+      "items": [
+        "Docker",
+        "Docker Compose",
+        "Nginx",
+        "Linux",
+        "VPS",
+        "Git",
+        "GitLab CI"
+      ]
+    },
+    {
+      "group": "Тәжірибелер",
+      "items": [
+        "код-ревью",
+        "SOLID",
+        "TDD",
+        "PSR-12",
+        "legacy кодпен жұмыс",
+        "құрылғыларда тестілеу"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "place": "Ақтөбе жоғары политехникалық колледжі",
+      "year": "2021",
+      "field": "Ақпараттық технологиялар, веб-әзірлеу"
+    }
+  ]
 }
