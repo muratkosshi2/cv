@@ -209,8 +209,8 @@
       "description": "New modules and admin panel improvements on Yii2 and PostgreSQL.",
       "links": [
         {
-          "text": "aumvd.citorleu.kz",
-          "url": "https://aumvd.citorleu.kz/"
+          "text": "aumvd.edu.kz",
+          "url": "https://aumvd.edu.kz/"
         }
       ],
       "icon": "/logos/aumvd.png"
@@ -220,8 +220,8 @@
       "description": "API, GraphQL and the academy information system.",
       "links": [
         {
-          "text": "academy.bilimal.kz",
-          "url": "https://academy.bilimal.kz/"
+          "text": "bilimwave.kz",
+          "url": "https://bilimwave.kz/"
         }
       ],
       "icon": "/logos/bilimal.png"
